@@ -247,10 +247,11 @@ ul {
   display: block;
   color: var(--text-primary);
   white-space: nowrap;
-  text-shadow:
-    0.5px 0 0 currentColor,
-    -0.5px 0 0 currentColor,
-    0 0.5px 0 currentColor;
+  font-family: 'Oswald', 'Bebas Neue', sans-serif;
+  font-weight: 700;
+  font-size: clamp(30px, 9.5vw, 46px);
+  letter-spacing: 0.5px;
+  line-height: 1;
 }
 
 .title-sub {
