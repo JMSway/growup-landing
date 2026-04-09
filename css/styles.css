@@ -928,13 +928,14 @@ ul {
 .expert-problems-title {
   font-family: 'Bebas Neue', sans-serif;
   font-weight: 400;
-  font-size: clamp(15px, 4.7vw, 22px);
+  font-size: clamp(14px, 4.1vw, 20px);
   line-height: 1.15;
   color: var(--text-primary);
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 0;
   white-space: nowrap;
+  padding: 0 12px;
 }
 
 .expert-problems-sub {
