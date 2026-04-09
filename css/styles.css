@@ -249,8 +249,8 @@ ul {
   white-space: nowrap;
   font-family: 'Oswald', 'Bebas Neue', sans-serif;
   font-weight: 700;
-  font-size: clamp(30px, 9.5vw, 46px);
-  letter-spacing: 0.5px;
+  font-size: min(8vw, 38px);
+  letter-spacing: 0;
   line-height: 1;
 }
 
