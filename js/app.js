@@ -40,14 +40,17 @@ var io = new IntersectionObserver(function (entries) {
 
 document.querySelectorAll('.fade-up').forEach(function (el) { io.observe(el); });
 
-/* Step underline: draw wavy line under внеконкурентное предложение on scroll */
+/* Step underline: draw wavy line under внеконкурентное предложение, re-trigger on re-entry */
 var underlineTarget = document.querySelector('.step-underline-target');
 if (underlineTarget) {
   var underlineIO = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
       if (e.isIntersecting) {
+        e.target.classList.remove('is-drawn');
+        void e.target.offsetWidth;
         e.target.classList.add('is-drawn');
-        underlineIO.unobserve(e.target);
+      } else {
+        e.target.classList.remove('is-drawn');
       }
     });
   }, { threshold: 0.6 });

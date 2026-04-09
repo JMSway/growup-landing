@@ -1285,20 +1285,20 @@ ul {
 
 .step-underline-target.is-drawn .step-underline {
   animation:
-    stepUnderlineDraw 1.2s ease-out forwards,
-    stepUnderlineFloat 4s ease-in-out 1.2s infinite;
+    stepUnderlineDraw 2s ease-out forwards,
+    stepUnderlineFloat 5s ease-in-out 2s infinite;
   opacity: 1;
 }
 
 @keyframes stepUnderlineDraw {
   0%   { stroke-dashoffset: 220; opacity: 0; }
-  20%  { opacity: 1; }
+  15%  { opacity: 1; }
   100% { stroke-dashoffset: 0; opacity: 1; }
 }
 
 @keyframes stepUnderlineFloat {
   0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(2px); }
+  50%      { transform: translateY(1.5px); }
 }
 
 /* Список «и все говорят...» */
@@ -1379,8 +1379,18 @@ ul {
   display: block;
   border-radius: 14px;
   box-shadow:
-    0 6px 20px rgba(0, 0, 0, 0.35),
-    0 0 24px rgba(232, 101, 26, 0.10);
+    0 8px 28px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(232, 101, 26, 0.15),
+    0 0 60px rgba(232, 101, 26, 0.06);
+  animation: stepImageFloat 6s ease-in-out infinite;
+}
+
+.step-card > .step-image:nth-of-type(2) img { animation-delay: -2s; }
+.step-card > .step-image:nth-of-type(3) img { animation-delay: -4s; }
+
+@keyframes stepImageFloat {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-3px); }
 }
 
 .step-image-caption {
@@ -1479,6 +1489,13 @@ ul {
 [data-theme="light"] .step-card {
   border-color: transparent;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .step-image img {
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.1),
+    0 0 28px rgba(232, 101, 26, 0.18),
+    0 0 56px rgba(232, 101, 26, 0.08);
 }
 
 /* --- Fade-in анимация при скролле --- */
