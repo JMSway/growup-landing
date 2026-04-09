@@ -7,6 +7,9 @@
   <link rel="icon" type="image/png" href="assets/images/favicon/favicon.png">
   <link rel="apple-touch-icon" href="assets/images/favicon/favicon.png">
   <link rel="preconnect" href="https://code.iconify.design" crossorigin>
+  <!-- Preload critical hero image -->
+  <link rel="preload" href="assets/images/mainPage1/main1-suitcase.webp" as="image" type="image/webp">
+  <!-- Preload fonts -->
   <link rel="preload" href="assets/fonts/Gilroy-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/Gilroy-Medium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/BebasNeue-Regular.ttf" as="font" type="font/ttf" crossorigin>
@@ -39,18 +42,30 @@
     <!-- 2. ВИЗУАЛ (flex: 1) -->
     <div class="hero-visual">
       <div class="hero-glow"></div>
-      <img src="assets/images/mainPage1/main2-clouds-back.png"
-           alt="" class="layer clouds-back" loading="eager">
-      <img src="assets/images/mainPage1/main2-clouds-back.png"
-           alt="" class="layer clouds-left" loading="eager">
-      <img src="assets/images/mainPage1/main1-suitcase.png"
-           alt="Чемодан с достопримечательностями мира" class="layer suitcase" loading="eager">
-      <img src="assets/images/mainPage1/main2-clouds.png"
-           alt="" class="layer clouds" loading="eager">
-      <img src="assets/images/mainPage1/main3-plane.png"
-           alt="" class="layer plane" loading="eager">
-      <img src="assets/images/mainPage1/main4-badge.png"
-           alt="5 000 000 ₸" class="layer badge" loading="eager">
+      <picture class="layer clouds-back">
+        <source srcset="assets/images/mainPage1/main2-clouds-back.webp" type="image/webp">
+        <img src="assets/images/mainPage1/main2-clouds-back.png" alt="" loading="eager">
+      </picture>
+      <picture class="layer clouds-left">
+        <source srcset="assets/images/mainPage1/main2-clouds-back.webp" type="image/webp">
+        <img src="assets/images/mainPage1/main2-clouds-back.png" alt="" loading="eager">
+      </picture>
+      <picture class="layer suitcase">
+        <source srcset="assets/images/mainPage1/main1-suitcase.webp" type="image/webp">
+        <img src="assets/images/mainPage1/main1-suitcase.png" alt="Чемодан с достопримечательностями мира" loading="eager">
+      </picture>
+      <picture class="layer clouds">
+        <source srcset="assets/images/mainPage1/main2-clouds.webp" type="image/webp">
+        <img src="assets/images/mainPage1/main2-clouds.png" alt="" loading="eager">
+      </picture>
+      <picture class="layer plane">
+        <source srcset="assets/images/mainPage1/main3-plane.webp" type="image/webp">
+        <img src="assets/images/mainPage1/main3-plane.png" alt="" loading="eager">
+      </picture>
+      <picture class="layer badge">
+        <source srcset="assets/images/mainPage1/main4-badge.webp" type="image/webp">
+        <img src="assets/images/mainPage1/main4-badge.png" alt="5 000 000 ₸" loading="eager">
+      </picture>
     </div>
 
     <!-- 3. НИЖНИЙ БЛОК -->
@@ -85,8 +100,11 @@
     <!-- Заголовок + фото -->
     <div class="case-intro">
       <div class="case-photo-wrap">
-        <img src="assets/images/block-ainur/ainura-photo.png"
-             alt="Айнура — владелец языковой школы" class="case-photo" loading="lazy">
+        <picture>
+          <source srcset="assets/images/block-ainur/ainura-photo.webp" type="image/webp">
+          <img src="assets/images/block-ainur/ainura-photo.png"
+               alt="Айнура — владелец языковой школы" class="case-photo" loading="lazy">
+        </picture>
       </div>
       <div class="case-intro-text">
         <h2 class="case-title">
@@ -124,10 +142,16 @@
 
     <!-- Скриншот ДО -->
     <div class="case-screens fade-up">
-      <img src="assets/images/block-ainur/chat-ainura-do.png"
-           alt="Сообщение Айнуры до работы с Grow Up" class="case-screen" loading="lazy">
-      <img src="assets/images/block-ainur/chat-asel-do.png"
-           alt="Выручка до — 876 873 ₸" class="case-screen case-screen--small" loading="lazy">
+      <picture>
+        <source srcset="assets/images/block-ainur/chat-ainura-do.webp" type="image/webp">
+        <img src="assets/images/block-ainur/chat-ainura-do.png"
+             alt="Сообщение Айнуры до работы с Grow Up" class="case-screen" loading="lazy">
+      </picture>
+      <picture>
+        <source srcset="assets/images/block-ainur/chat-asel-do.webp" type="image/webp">
+        <img src="assets/images/block-ainur/chat-asel-do.png"
+             alt="Выручка до — 876 873 ₸" class="case-screen case-screen--small" loading="lazy">
+      </picture>
     </div>
 
     <!-- Декоративная стрелка -->
@@ -160,10 +184,16 @@
 
     <!-- Скриншот ПОСЛЕ -->
     <div class="case-screens fade-up">
-      <img src="assets/images/block-ainur/chat-ainura-posle.png"
-           alt="Сообщение Айнуры — вышли на 5 миллионов" class="case-screen" loading="lazy">
-      <img src="assets/images/block-ainur/chat-ainur-posle.png"
-           alt="Выручка после — 5 645 343 ₸" class="case-screen case-screen--small" loading="lazy">
+      <picture>
+        <source srcset="assets/images/block-ainur/chat-ainura-posle.webp" type="image/webp">
+        <img src="assets/images/block-ainur/chat-ainura-posle.png"
+             alt="Сообщение Айнуры — вышли на 5 миллионов" class="case-screen" loading="lazy">
+      </picture>
+      <picture>
+        <source srcset="assets/images/block-ainur/chat-ainur-posle.webp" type="image/webp">
+        <img src="assets/images/block-ainur/chat-ainur-posle.png"
+             alt="Выручка после — 5 645 343 ₸" class="case-screen case-screen--small" loading="lazy">
+      </picture>
     </div>
 
   </section>

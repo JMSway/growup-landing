@@ -321,6 +321,12 @@ ul {
   will-change: transform;
 }
 
+.layer img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 /* --- CLOUDS-BACK (z-index: 0) — самый задний, за чемоданом --- */
 .layer.clouds-back {
   z-index: 0;
@@ -634,6 +640,10 @@ ul {
   margin-bottom: 20px;
 }
 
+.case-screens picture {
+  display: block;
+}
+
 .case-screen {
   width: 100%;
   border-radius: 16px;
@@ -643,6 +653,9 @@ ul {
 
 .case-screen--small {
   max-width: 280px;
+}
+
+.case-screens picture:has(.case-screen--small) {
   align-self: center;
 }
 
