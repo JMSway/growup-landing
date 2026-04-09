@@ -253,12 +253,6 @@ ul {
   letter-spacing: 0;
   line-height: 1;
   align-self: center;
-  /* Скрыто до подгонки JS, чтобы не было прыжка размера */
-  visibility: hidden;
-}
-
-.title-accent.is-fitted {
-  visibility: visible;
 }
 
 .title-sub {
