@@ -474,7 +474,7 @@ ul {
 /* --- Scroll Indicator --- */
 .scroll-indicator {
   margin-top: 12px;
-  font-size: 58px;
+  font-size: 174px;
   color: var(--accent);
   filter: drop-shadow(0 6px 14px rgba(232, 101, 26, 0.5));
   animation: scrollBounce 1.4s ease-in-out infinite;
