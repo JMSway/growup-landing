@@ -1951,50 +1951,59 @@ ul {
    ============================================ */
 .outcome {
   position: relative;
-  padding: 56px 16px 64px;
+  padding: 80px 16px 64px;
+  margin-top: -40px;          /* перекрытие со Step 3 — убирает шов */
   max-width: 480px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   isolation: isolate;
 }
 
+/* Бесшовная заливка фоном — поглощает «чёрную линию» между секциями */
 .outcome::before {
   content: '';
   position: absolute;
-  inset: 0;
+  inset: -1px 0 0 0;
   z-index: -1;
   pointer-events: none;
   background:
-    radial-gradient(ellipse 90% 24% at 50% 0%, rgba(232, 101, 26, 0.16), transparent 75%),
-    radial-gradient(ellipse 80% 30% at 50% 50%, rgba(232, 101, 26, 0.06), transparent 75%);
+    /* Большое оранжевое свечение по верху, перекрывает низ Step 3 */
+    radial-gradient(ellipse 110% 30% at 50% 0%, rgba(232, 101, 26, 0.22), transparent 70%),
+    /* Среднее свечение по центру для глубины */
+    radial-gradient(ellipse 80% 30% at 50% 50%, rgba(232, 101, 26, 0.06), transparent 75%),
+    /* Лёгкий низ */
+    radial-gradient(ellipse 90% 22% at 50% 100%, rgba(232, 101, 26, 0.1), transparent 75%);
 }
 
-/* --- Заголовок (квадратный текст, как в референсе) --- */
+/* --- Заголовок (квадратный текст, шрифт как в hero «Как языковой школе») --- */
 .outcome-headline-wrap {
   display: flex;
   justify-content: center;
-  margin-bottom: 22px;
-  padding: 0 4px;
+  margin-bottom: 24px;
+  padding: 0 6px;
 }
 
 .outcome-headline {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   gap: 6px;
+  width: 100%;
   max-width: 100%;
-  font-family: 'Bebas Neue', sans-serif;
-  font-weight: 400;
+  font-family: 'Oswald', 'Bebas Neue', sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
   text-align: center;
   color: var(--text-primary);
-  letter-spacing: 0.6px;
+  letter-spacing: 0.4px;
   line-height: 1.04;
 }
 
 .outcome-line {
   display: block;
-  font-size: clamp(17px, 5.2vw, 23px);
-  overflow-wrap: break-word;
+  white-space: nowrap;        /* нужно для авто-фита: каждую строку JS подгоняет под ширину контейнера */
+  font-size: 22px;            /* стартовый размер — JS перепишет */
+  text-align: center;
 }
 
 .outcome-line--accent {
@@ -2054,10 +2063,11 @@ ul {
   color: var(--accent);
 }
 
-/* Иллюстрация (cartoon до/после, во всю ширину карточки) */
+/* Иллюстрация (cartoon до/после, 90% ширины карточки, центр) */
 .outcome-illustration {
   display: block;
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   border-radius: 14px;
   overflow: hidden;
   box-shadow:
@@ -2098,6 +2108,7 @@ ul {
 .outcome-icon--bad {
   background: rgba(154, 144, 136, 0.08);
   border: 2px solid rgba(154, 144, 136, 0.5);
+  transform: translateX(14px) rotate(-8deg);   /* немного направо + лёгкий поворот */
 }
 
 .outcome-icon--bad iconify-icon {
@@ -2108,6 +2119,7 @@ ul {
   background: rgba(232, 101, 26, 0.14);
   border: 2px solid rgba(232, 101, 26, 0.65);
   box-shadow: 0 0 18px rgba(232, 101, 26, 0.25);
+  transform: translateX(-14px);                /* немного налево */
 }
 
 .outcome-icon--good iconify-icon {

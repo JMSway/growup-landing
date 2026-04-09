@@ -36,6 +36,34 @@ if (document.fonts && document.fonts.ready) {
 }
 window.addEventListener('resize', fitHeroTitle);
 
+/* Outcome headline: каждую строку подгоняем под ширину обёртки (как hero title) */
+function fitOutcomeHeadline() {
+  var wrap = document.querySelector('.outcome-headline-wrap');
+  var lines = document.querySelectorAll('.outcome-headline .outcome-line');
+  if (!wrap || !lines.length) return;
+  var wrapW = wrap.getBoundingClientRect().width;
+  if (!wrapW) return;
+  // Целевая ширина — 96% обёртки (оставляем небольшие поля по бокам)
+  var targetW = wrapW * 0.96;
+  lines.forEach(function (line) {
+    line.style.fontSize = '';
+    var w = line.getBoundingClientRect().width;
+    if (!w) return;
+    var current = parseFloat(getComputedStyle(line).fontSize);
+    var newSize = current * (targetW / w);
+    // Безопасные границы
+    newSize = Math.max(14, Math.min(newSize, 36));
+    line.style.fontSize = newSize + 'px';
+  });
+}
+
+if (document.fonts && document.fonts.ready) {
+  document.fonts.ready.then(fitOutcomeHeadline);
+} else {
+  window.addEventListener('load', fitOutcomeHeadline);
+}
+window.addEventListener('resize', fitOutcomeHeadline);
+
 /* Fade-in on scroll */
 var io = new IntersectionObserver(function (entries) {
   entries.forEach(function (e) {
