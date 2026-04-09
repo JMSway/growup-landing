@@ -1377,6 +1377,41 @@ ul {
   margin-top: 12px;
 }
 
+/* Главный заголовок внутри шага (Шаг 3) */
+.step-headline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 4px 0 8px;
+  text-align: left;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  font-size: clamp(20px, 5.6vw, 26px);
+  line-height: 1.1;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.step-headline strong {
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+.step-headline-icon {
+  flex-shrink: 0;
+  font-size: 38px;
+  color: var(--accent);
+  filter: drop-shadow(0 0 10px rgba(232, 101, 26, 0.4));
+  animation: stepHeadlineFloat 3.5s ease-in-out infinite;
+}
+
+@keyframes stepHeadlineFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%      { transform: translateY(-3px) rotate(-3deg); }
+}
+
 /* TPU label */
 /* Блок ТПУ — иконка слева, текст справа в две строки */
 .step-tpu-block {
