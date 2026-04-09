@@ -701,6 +701,36 @@ ul {
   font-size: 22px;
 }
 
+/* --- Карусель Kaspi --- */
+.case-kaspi {
+  margin-top: 20px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.case-kaspi::-webkit-scrollbar {
+  display: none;
+}
+
+.case-kaspi-track {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 4px;
+}
+
+.case-kaspi-card {
+  flex-shrink: 0;
+  width: 72%;
+}
+
+.case-kaspi-card img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
 /* --- Fade-in анимация при скролле --- */
 .fade-up {
   opacity: 0;
