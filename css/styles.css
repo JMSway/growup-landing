@@ -325,7 +325,7 @@ ul {
 .layer.clouds-back {
   z-index: 0;
   width: 120%;
-  top: -10%;
+  top: 5%;
   opacity: 0.45;
   animation: cloudsMove 30s ease-in-out infinite reverse;
 }
@@ -335,7 +335,7 @@ ul {
   z-index: 0;
   width: 70%;
   left: 10%;
-  bottom: 25%;
+  bottom: 10%;
   opacity: 0.4;
   transform: translateX(-50%) scaleX(-1);
   animation: cloudsMove 26s ease-in-out infinite;
@@ -362,7 +362,7 @@ ul {
 .layer.clouds {
   z-index: 3;
   width: 110%;
-  top: -10%;
+  top: 5%;
   opacity: 0.7;
   animation: cloudsMove 24s ease-in-out infinite;
 }
