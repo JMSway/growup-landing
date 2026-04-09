@@ -1383,6 +1383,12 @@ ul {
   margin-left: 26px;
 }
 
+.step-result-line {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: clamp(10px, 2.95vw, 13px);
+}
+
 .step-question {
   text-align: center;
   font-size: clamp(13px, 3.7vw, 16px);
