@@ -683,22 +683,34 @@ ul {
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4);
 }
 
-/* --- Разделитель ДО→ПОСЛЕ --- */
+/* --- Разделитель ДО→ПОСЛЕ (SVG стрелка) --- */
 .case-divider {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0;
-  margin: 20px 0;
-  color: var(--accent);
-  font-size: 28px;
-  filter: drop-shadow(0 3px 8px rgba(232, 101, 26, 0.4));
+  justify-content: center;
+  margin: 12px 0;
 }
 
-.case-divider iconify-icon:last-child {
-  margin-top: -12px;
-  opacity: 0.5;
-  font-size: 22px;
+.case-arrow-svg {
+  width: 30px;
+  height: 90px;
+  filter: drop-shadow(0 3px 8px rgba(232, 101, 26, 0.3));
+}
+
+/* --- Извилистая декоративная стрелка (фон) --- */
+.case-curve-arrow {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 200px;
+  z-index: 0;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.case-card {
+  position: relative;
 }
 
 /* --- Карусель Kaspi --- */
