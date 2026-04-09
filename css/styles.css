@@ -453,30 +453,29 @@ ul {
 .hero-highlight {
   font-family: 'Bebas Neue', sans-serif;
   font-weight: 400;
-  font-size: 28px;
+  font-size: 32px;
   color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-top: 8px;
   text-shadow:
-    0.5px 0 0 var(--accent),
-    -0.5px 0 0 var(--accent);
+    1px 0 0 var(--accent),
+    -1px 0 0 var(--accent),
+    0 1px 0 var(--accent);
 }
 
 .hero-next {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Gilroy', sans-serif;
   font-weight: 400;
-  font-size: 20px;
-  color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  font-size: 16px;
+  color: var(--text-primary);
   margin-top: 6px;
 }
 
 /* --- Scroll Indicator --- */
 .scroll-indicator {
-  margin-top: 8px;
-  font-size: 36px;
+  margin-top: 10px;
+  font-size: 42px;
   color: var(--accent);
   animation: scrollBounce 1.4s ease-in-out infinite;
 }
