@@ -1293,6 +1293,49 @@ ul {
   overflow: hidden;
 }
 
+/* Контейнер для картинки + накладок */
+.step-image-wrap {
+  position: relative;
+  margin: 18px auto 6px;
+  width: 80%;
+}
+
+.step-image-wrap .step-image {
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* 2GIS — ещё уже */
+.step-image-2gis {
+  width: 78%;
+}
+
+/* Оранжевый кружок поверх "Места 1320" */
+.step-image-circle {
+  position: absolute;
+  top: 13%;
+  right: 4%;
+  width: 26%;
+  aspect-ratio: 1.6 / 1;
+  border: 2.5px solid var(--accent);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: rotate(-8deg);
+  box-shadow: 0 0 12px rgba(232, 101, 26, 0.5);
+  animation: stepCirclePulse 2.5s ease-in-out infinite;
+}
+
+@keyframes stepCirclePulse {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(232, 101, 26, 0.4);
+    border-color: rgba(232, 101, 26, 0.7);
+  }
+  50%      {
+    box-shadow: 0 0 18px rgba(232, 101, 26, 0.8);
+    border-color: var(--accent);
+  }
+}
+
 .step-image img {
   width: 100%;
   height: auto;
