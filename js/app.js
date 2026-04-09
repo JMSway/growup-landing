@@ -40,14 +40,28 @@ var io = new IntersectionObserver(function (entries) {
 
 document.querySelectorAll('.fade-up').forEach(function (el) { io.observe(el); });
 
-/* Bridge: light up words on scroll */
+/* Bridge: light up words on scroll, fade back, re-trigger on re-entry */
 var bridge = document.querySelector('.bridge');
 if (bridge) {
+  var bridgeFadeTimer = null;
   var bridgeIO = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
       if (e.isIntersecting) {
-        e.target.classList.add('is-lit');
-        bridgeIO.unobserve(e.target);
+        // Reset state, then trigger
+        bridge.classList.remove('is-lit');
+        // Force reflow so animation restarts cleanly
+        void bridge.offsetWidth;
+        bridge.classList.add('is-lit');
+        clearTimeout(bridgeFadeTimer);
+        // Words: last word lit at 1.2s + 0.6s transition = 1.8s
+        // Dots: 2 cycles × 1.5s starting at 1.6s = ends ~5.6s
+        // Fade back at 6.2s
+        bridgeFadeTimer = setTimeout(function () {
+          bridge.classList.remove('is-lit');
+        }, 6200);
+      } else {
+        clearTimeout(bridgeFadeTimer);
+        bridge.classList.remove('is-lit');
       }
     });
   }, { threshold: 0.5 });

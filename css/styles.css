@@ -835,6 +835,7 @@ ul {
 .bridge-word {
   color: var(--text-muted);
   transition: color 0.6s ease;
+  transition-delay: 0s;
 }
 
 .bridge.is-lit .bridge-word {
@@ -856,7 +857,7 @@ ul {
 }
 
 .bridge.is-lit .bridge-dot {
-  animation: bridgeDotBlink 1.5s infinite;
+  animation: bridgeDotBlink 1.5s 2;
 }
 
 .bridge.is-lit .bridge-dot:nth-child(1) { animation-delay: 1.6s; }
