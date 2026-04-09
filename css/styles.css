@@ -107,6 +107,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
@@ -158,7 +159,7 @@ ul {
   gap: 0;
   max-width: 480px;
   margin: 0 auto;
-  overflow: visible;
+  overflow: clip;
 }
 
 /* Мягкая оранжевая тень сверху */
