@@ -531,9 +531,9 @@ ul {
 
 .case-photo-wrap {
   flex-shrink: 0;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
+  width: 85px;
+  height: 105px;
+  border-radius: 28px;
   overflow: hidden;
   box-shadow: 0 0 30px rgba(232, 101, 26, 0.2);
 }
