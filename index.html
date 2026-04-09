@@ -76,5 +76,15 @@
 
   <!-- Iconify CDN -->
   <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+
+  <!-- Theme Toggle -->
+  <script>
+    document.querySelector('.theme-toggle').addEventListener('click', function () {
+      var html = document.documentElement;
+      html.setAttribute('data-theme',
+        html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'
+      );
+    });
+  </script>
 </body>
 </html>

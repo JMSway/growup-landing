@@ -88,6 +88,13 @@
   box-sizing: border-box;
 }
 
+/* Плавная смена темы */
+*,
+*::before,
+*::after {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
 html {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
