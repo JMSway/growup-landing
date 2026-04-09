@@ -160,7 +160,7 @@ ul {
   gap: 0;
   max-width: 480px;
   margin: 0 auto;
-  overflow: hidden;
+  overflow: clip;
 }
 
 /* Мягкая оранжевая тень сверху */
