@@ -1215,6 +1215,20 @@ ul {
   text-align: center;
 }
 
+.step-intro-icon {
+  display: block;
+  font-size: 32px;
+  color: var(--accent);
+  margin: 0 auto 10px;
+  filter: drop-shadow(0 0 10px rgba(232, 101, 26, 0.4));
+  animation: stepIntroFloat 4s ease-in-out infinite;
+}
+
+@keyframes stepIntroFloat {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-3px); }
+}
+
 /* Точки после "миллионниках" — серые, оранжевый блик пробегает по очереди */
 .step-dots {
   display: inline;
