@@ -1548,7 +1548,7 @@ ul {
 
 .step-result--3 .step-result-text strong {
   font-family: 'Oswald', 'Bebas Neue', sans-serif;
-  font-size: clamp(18px, 5vw, 22px);
+  font-size: clamp(20px, 5.6vw, 24px);
   font-weight: 700;
   letter-spacing: 0.4px;
   text-transform: uppercase;
