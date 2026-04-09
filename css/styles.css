@@ -1405,42 +1405,45 @@ ul {
   font-size: 17px;
 }
 
-/* "И самое главное" блок (шаг 3) */
-.step-main-point {
+/* "И самое главное" — креативный inline-акцент (шаг 3) */
+.step-main-line {
   margin-top: 18px;
-  padding: 14px 16px;
-  border-radius: 14px;
-  background: rgba(232, 101, 26, 0.05);
-  border: 1px solid rgba(232, 101, 26, 0.2);
   text-align: center;
+  font-size: clamp(14px, 4.1vw, 17px);
+  line-height: 1.5;
 }
 
-.step-main-point-label {
+.step-main-line-label {
+  display: block;
   font-family: 'Gilroy', sans-serif;
-  font-weight: 600;
-  font-size: 13px;
-  color: var(--text-secondary);
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--accent);
   text-transform: uppercase;
-  letter-spacing: 0.8px;
+  letter-spacing: 1.2px;
   margin-bottom: 6px;
 }
 
-.step-main-point-text {
-  font-family: 'Bebas Neue', sans-serif;
-  font-weight: 400;
-  font-size: clamp(16px, 4.6vw, 20px);
-  line-height: 1.15;
-  color: var(--text-primary);
-  text-transform: uppercase;
-  letter-spacing: 0.4px;
-}
-
-.step-main-point-icon {
-  font-size: 22px;
+.step-main-line-icon {
+  font-size: 19px;
   color: var(--accent);
   vertical-align: -4px;
-  margin-right: 6px;
-  filter: drop-shadow(0 0 8px rgba(232, 101, 26, 0.4));
+  margin-right: 4px;
+  filter: drop-shadow(0 0 6px rgba(232, 101, 26, 0.4));
+  animation: stepAlarmShake 2.8s ease-in-out infinite;
+}
+
+@keyframes stepAlarmShake {
+  0%, 90%, 100% { transform: rotate(0); }
+  92%           { transform: rotate(-10deg); }
+  94%           { transform: rotate(10deg); }
+  96%           { transform: rotate(-8deg); }
+  98%           { transform: rotate(6deg); }
+}
+
+.step-main-line strong {
+  font-weight: 700;
+  color: var(--text-primary);
 }
 
 /* Итог шага 3 — построчно с разделителями */
@@ -1470,19 +1473,30 @@ ul {
 .step-result-row {
   display: block;
   font-family: 'Gilroy', sans-serif;
-  font-size: 13px;
-  line-height: 1.4;
+  font-size: clamp(13px, 3.8vw, 15px);
+  line-height: 1.45;
   color: var(--text-primary);
   white-space: nowrap;
+  text-align: center;
 }
 
 .step-result-final {
-  margin-top: 6px;
-  padding-top: 8px;
+  margin-top: 8px;
+  padding-top: 10px;
   border-top: 1px solid rgba(232, 101, 26, 0.25);
   width: 100%;
-  font-size: 16px;
-  font-weight: 700;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(20px, 6.2vw, 28px);
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.step-result--3 .step-result-text strong {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(18px, 5vw, 22px);
+  font-weight: 400;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
 }
 
 /* Главный заголовок внутри шага (Шаг 3) */
