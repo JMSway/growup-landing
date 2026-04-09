@@ -694,9 +694,19 @@ ul {
     0 0 60px rgba(232, 101, 26, 0.06);
 }
 
-/* --- Стрелка от чата к Kaspi (ПОСЛЕ) --- */
+/* --- Стрелки от чата к банку (ДО/ПОСЛЕ) --- */
+.case-proof--do,
 .case-proof--posle {
   position: relative;
+}
+
+.proof-arrow--do {
+  animation: proofArrowSad 4s ease-in-out infinite;
+}
+
+@keyframes proofArrowSad {
+  0%, 100% { transform: translateY(0); opacity: 0.5; }
+  50%      { transform: translateY(3px); opacity: 0.35; }
 }
 
 .proof-arrow {
