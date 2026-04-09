@@ -453,15 +453,14 @@ ul {
 .hero-highlight {
   font-family: 'Bebas Neue', sans-serif;
   font-weight: 400;
-  font-size: 32px;
+  font-size: 26px;
   color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-top: 8px;
   text-shadow:
-    1px 0 0 var(--accent),
-    -1px 0 0 var(--accent),
-    0 1px 0 var(--accent);
+    0.5px 0 0 var(--accent),
+    -0.5px 0 0 var(--accent);
 }
 
 .hero-next {
@@ -474,9 +473,10 @@ ul {
 
 /* --- Scroll Indicator --- */
 .scroll-indicator {
-  margin-top: 10px;
-  font-size: 42px;
+  margin-top: 12px;
+  font-size: 48px;
   color: var(--accent);
+  filter: drop-shadow(0 6px 14px rgba(232, 101, 26, 0.5));
   animation: scrollBounce 1.4s ease-in-out infinite;
 }
 
