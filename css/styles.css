@@ -453,7 +453,7 @@ ul {
 .hero-highlight {
   font-family: 'Bebas Neue', sans-serif;
   font-weight: 400;
-  font-size: 26px;
+  font-size: 30px;
   color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -466,7 +466,7 @@ ul {
 .hero-next {
   font-family: 'Gilroy', sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 20px;
   color: var(--text-primary);
   margin-top: 6px;
 }
@@ -474,7 +474,7 @@ ul {
 /* --- Scroll Indicator --- */
 .scroll-indicator {
   margin-top: 12px;
-  font-size: 48px;
+  font-size: 58px;
   color: var(--accent);
   filter: drop-shadow(0 6px 14px rgba(232, 101, 26, 0.5));
   animation: scrollBounce 1.4s ease-in-out infinite;
