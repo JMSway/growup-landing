@@ -6,6 +6,10 @@
   <title>Метод Grow Up</title>
   <link rel="icon" type="image/png" href="assets/images/favicon/favicon.png">
   <link rel="apple-touch-icon" href="assets/images/favicon/favicon.png">
+  <link rel="preconnect" href="https://code.iconify.design" crossorigin>
+  <link rel="preload" href="assets/fonts/Gilroy-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/Gilroy-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/BebasNeue-Regular.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/icons.css">
 </head>
@@ -74,17 +78,7 @@
 
   </section>
 
-  <!-- Iconify CDN -->
-  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
-
-  <!-- Theme Toggle -->
-  <script>
-    document.querySelector('.theme-toggle').addEventListener('click', function () {
-      var html = document.documentElement;
-      html.setAttribute('data-theme',
-        html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'
-      );
-    });
-  </script>
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" defer></script>
+  <script src="js/app.js" defer></script>
 </body>
 </html>

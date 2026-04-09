@@ -88,11 +88,18 @@
   box-sizing: border-box;
 }
 
-/* Плавная смена темы */
-*,
-*::before,
-*::after {
-  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+/* Плавная смена темы — только на ключевых элементах */
+body,
+.hero,
+.hero::before,
+.theme-toggle,
+.hero-title,
+.hero-subtitle,
+.hero-bottom,
+.hero-highlight,
+.hero-next,
+.hero-bullets .bullet-success span {
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 html {
