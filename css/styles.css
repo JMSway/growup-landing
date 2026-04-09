@@ -282,8 +282,9 @@ ul {
 .growup-grow,
 .growup-up {
   display: inline-block;
-  color: inherit;
-  font-weight: 700;
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 800;
+  color: var(--text-primary);
   animation: growupBlink 3.6s ease-in-out infinite;
 }
 
