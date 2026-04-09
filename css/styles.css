@@ -680,7 +680,9 @@ ul {
 .case-proof img {
   width: 100%;
   border-radius: 12px;
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4);
+  box-shadow:
+    0 8px 28px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(232, 101, 26, 0.1);
 }
 
 /* --- Разделитель ДО→ПОСЛЕ (SVG стрелка) --- */
@@ -688,12 +690,18 @@ ul {
   display: flex;
   justify-content: center;
   margin: 12px 0;
+  animation: caseArrowFloat 2.5s ease-in-out infinite;
 }
 
 .case-arrow-svg {
   width: 30px;
   height: 90px;
   filter: drop-shadow(0 3px 8px rgba(232, 101, 26, 0.3));
+}
+
+@keyframes caseArrowFloat {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(6px); }
 }
 
 /* --- Извилистая декоративная стрелка (фон) --- */
@@ -711,6 +719,16 @@ ul {
 
 .case-card {
   position: relative;
+}
+
+[data-theme="light"] .case-card {
+  border-color: transparent;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .case-intro {
+  border-color: transparent;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
 }
 
 /* --- Карусель Kaspi --- */
@@ -740,7 +758,13 @@ ul {
 .case-kaspi-card img {
   width: 100%;
   border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.3),
+    0 0 16px rgba(232, 101, 26, 0.08);
+}
+
+[data-theme="light"] .case-kaspi-card img {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 /* --- Fade-in анимация при скролле --- */
