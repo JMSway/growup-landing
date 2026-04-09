@@ -344,7 +344,7 @@ ul {
 .layer.plane {
   z-index: 4;
   width: 35%;
-  top: 5%;
+  top: 15%;
   animation: planeFly 18s linear infinite;
 }
 
