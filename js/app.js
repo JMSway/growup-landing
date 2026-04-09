@@ -48,6 +48,23 @@ var io = new IntersectionObserver(function (entries) {
 
 document.querySelectorAll('.fade-up').forEach(function (el) { io.observe(el); });
 
+/* Step 3 result curve: charge line on enter, re-trigger on re-entry */
+var resultCurves = document.querySelectorAll('.step-result--3');
+if (resultCurves.length) {
+  var curveIO = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) {
+        e.target.classList.remove('is-charged');
+        void e.target.offsetWidth;
+        e.target.classList.add('is-charged');
+      } else {
+        e.target.classList.remove('is-charged');
+      }
+    });
+  }, { threshold: 0.4 });
+  resultCurves.forEach(function (el) { curveIO.observe(el); });
+}
+
 /* Step underline: draw wavy line under accent phrases, re-trigger on re-entry */
 var underlineTargets = document.querySelectorAll('.step-underline-target');
 if (underlineTargets.length) {

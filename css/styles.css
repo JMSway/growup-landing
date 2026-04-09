@@ -1866,16 +1866,50 @@ ul {
   isolation: isolate;
 }
 
-/* Декоративная кривая стрелка от заголовка к итогу */
+/* Декоративная кривая стрелка от заголовка к итогу (от верх-лево к низ-право) */
 .step-result-curve {
   position: absolute;
-  left: 12px;
-  top: 18px;
-  bottom: 18px;
-  width: 50px;
+  inset: 12px 14px 14px 14px;
+  width: auto;
   height: auto;
   z-index: 0;
   pointer-events: none;
+  opacity: 0.6;
+}
+
+.curve-line {
+  stroke-dasharray: 480;
+  stroke-dashoffset: 480;
+}
+
+.curve-tip {
+  opacity: 0;
+}
+
+.curve-dot {
+  opacity: 0;
+}
+
+.step-result--3.is-charged .curve-line {
+  animation: chargeLine 2.4s ease-out forwards;
+}
+
+.step-result--3.is-charged .curve-tip {
+  animation: chargeFade 0.4s ease-out 2.2s forwards;
+}
+
+.step-result--3.is-charged .curve-dot {
+  animation: chargeFade 0.3s ease-out 0s forwards;
+}
+
+@keyframes chargeLine {
+  0%   { stroke-dashoffset: 480; }
+  100% { stroke-dashoffset: 0; }
+}
+
+@keyframes chargeFade {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 .step-result > .step-result-text {
