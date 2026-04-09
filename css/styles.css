@@ -690,7 +690,8 @@ ul {
   border-radius: 12px;
   box-shadow:
     0 8px 28px rgba(0, 0, 0, 0.4),
-    0 0 20px rgba(232, 101, 26, 0.1);
+    0 0 30px rgba(232, 101, 26, 0.15),
+    0 0 60px rgba(232, 101, 26, 0.06);
 }
 
 /* --- Разделитель ДО→ПОСЛЕ (SVG стрелка) --- */
@@ -764,10 +765,14 @@ ul {
 
 .case-kaspi-card img {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 14px;
   box-shadow:
     0 6px 20px rgba(0, 0, 0, 0.3),
     0 0 16px rgba(232, 101, 26, 0.08);
+}
+
+.case-kaspi {
+  border-radius: 16px;
 }
 
 [data-theme="light"] .case-kaspi-card img {
