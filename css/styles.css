@@ -1315,18 +1315,18 @@ ul {
 .step-list {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  margin-top: 8px;
+  gap: 8px;
+  margin-top: 10px;
   padding-left: 4px;
 }
 
 .step-list li {
   position: relative;
   font-family: 'Gilroy', sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.5;
   color: var(--text-secondary);
-  padding-left: 22px;
+  padding-left: 26px;
 }
 
 .step-list li::before {
@@ -1334,8 +1334,8 @@ ul {
   position: absolute;
   left: 0;
   top: 0.55em;
-  width: 14px;
-  height: 8px;
+  width: 16px;
+  height: 9px;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 8' fill='none'><path d='M1 4 L13 4 M10 1 L13 4 L10 7' stroke='%23E8651A' stroke-width='0.9' stroke-linecap='round' stroke-linejoin='round'/></svg>");
   background-repeat: no-repeat;
   background-size: contain;
@@ -1384,6 +1384,86 @@ ul {
 .step-image-kaspi {
   width: 82%;
   margin-top: 12px;
+}
+
+/* "И самое главное" блок (шаг 3) */
+.step-main-point {
+  margin-top: 18px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(232, 101, 26, 0.05);
+  border: 1px solid rgba(232, 101, 26, 0.2);
+  text-align: center;
+}
+
+.step-main-point-label {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 6px;
+}
+
+.step-main-point-text {
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  font-size: clamp(16px, 4.6vw, 20px);
+  line-height: 1.15;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.step-main-point-icon {
+  font-size: 22px;
+  color: var(--accent);
+  vertical-align: -4px;
+  margin-right: 6px;
+  filter: drop-shadow(0 0 8px rgba(232, 101, 26, 0.4));
+}
+
+/* Итог шага 3 — построчно с разделителями */
+.step-result--3 .step-result-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+}
+
+.step-result--3 .step-result-text strong {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(232, 101, 26, 0.25);
+  width: 100%;
+}
+
+.step-result-icon {
+  font-size: 18px;
+  color: var(--accent);
+}
+
+.step-result-row {
+  display: block;
+  font-family: 'Gilroy', sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.step-result-final {
+  margin-top: 6px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(232, 101, 26, 0.25);
+  width: 100%;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 /* Главный заголовок внутри шага (Шаг 3) */
