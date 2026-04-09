@@ -820,11 +820,13 @@ ul {
   margin: 0 auto;
 }
 
-/* --- Фото + имя (горизонтально) --- */
+/* --- Фото + имя (центрировано вертикально) --- */
 .expert-intro {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 8px;
+  text-align: center;
 }
 
 .expert-photo-wrap {
@@ -834,14 +836,41 @@ ul {
   border-radius: 50%;
   overflow: hidden;
   box-shadow:
-    0 4px 20px rgba(0, 0, 0, 0.4),
-    0 0 24px rgba(232, 101, 26, 0.12);
-  animation: expertPhotoFloat 4s ease-in-out infinite;
+    0 0 16px rgba(232, 101, 26, 0.4),
+    0 0 32px rgba(232, 101, 26, 0.2),
+    0 0 48px rgba(232, 101, 26, 0.1);
+  animation: expertFlameGlow 1.5s ease-in-out infinite alternate;
 }
 
-@keyframes expertPhotoFloat {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-4px); }
+@keyframes expertFlameGlow {
+  0%   {
+    box-shadow:
+      0 0 12px rgba(232, 101, 26, 0.35),
+      0 0 24px rgba(232, 101, 26, 0.15),
+      0 0 40px rgba(232, 101, 26, 0.06);
+    transform: translateY(1px);
+  }
+  33%  {
+    box-shadow:
+      0 0 18px rgba(232, 101, 26, 0.5),
+      0 0 36px rgba(232, 101, 26, 0.25),
+      0 0 52px rgba(232, 101, 26, 0.12);
+    transform: translateY(-2px);
+  }
+  66%  {
+    box-shadow:
+      0 0 14px rgba(232, 101, 26, 0.4),
+      0 0 28px rgba(232, 101, 26, 0.18),
+      0 0 44px rgba(232, 101, 26, 0.08);
+    transform: translateY(0px);
+  }
+  100% {
+    box-shadow:
+      0 0 20px rgba(232, 101, 26, 0.55),
+      0 0 40px rgba(232, 101, 26, 0.3),
+      0 0 56px rgba(232, 101, 26, 0.14);
+    transform: translateY(-3px);
+  }
 }
 
 .expert-photo {
@@ -866,7 +895,6 @@ ul {
   font-size: 12px;
   line-height: 1.4;
   color: var(--text-secondary);
-  margin-top: 4px;
 }
 
 /* --- Проблемы --- */
@@ -900,6 +928,21 @@ ul {
   border-radius: 12px;
   padding: 14px 16px;
   margin-top: 10px;
+  animation: problemFloat 5s ease-in-out infinite;
+}
+
+.problem-card:nth-child(2) {
+  animation-delay: -1.7s;
+}
+
+.problem-card:nth-child(3) {
+  animation-delay: -3.3s;
+}
+
+@keyframes problemFloat {
+  0%, 100% { transform: translateX(0); }
+  25%      { transform: translateX(4px); }
+  75%      { transform: translateX(-4px); }
 }
 
 .problem-label {
