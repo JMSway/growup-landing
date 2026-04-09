@@ -699,7 +699,7 @@ ul {
   display: flex;
   justify-content: flex-end;
   margin: 8px 0 4px;
-  padding-right: 10px;
+  padding-right: 30px;
   animation: caseArrowFloat 2.5s ease-in-out infinite;
 }
 
