@@ -282,7 +282,8 @@ ul {
 .growup-grow,
 .growup-up {
   display: inline-block;
-  color: var(--text-primary);
+  color: inherit;
+  font-weight: 700;
   animation: growupBlink 3.6s ease-in-out infinite;
 }
 
