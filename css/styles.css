@@ -115,7 +115,8 @@ body {
   font-weight: 400;
   background: var(--bg);
   color: var(--text-primary);
-  overflow-x: hidden;
+  overflow-x: clip;
+  overscroll-behavior-y: none;
   -webkit-tap-highlight-color: transparent;
   transition: background 0.3s ease, color 0.3s ease;
 }
@@ -507,6 +508,7 @@ ul {
   padding: 60px 16px 40px;
   max-width: 480px;
   margin: 0 auto;
+  overflow: clip;
 }
 
 /* --- Intro: карточка с фото + заголовок --- */
