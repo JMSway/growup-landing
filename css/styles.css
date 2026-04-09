@@ -224,7 +224,7 @@ ul {
 .title-sub {
   display: block;
   font-size: clamp(17px, 5vw, 26px);
-  margin-top: 2px;
+  margin-top: 0;
 }
 
 .hero-subtitle {
@@ -233,7 +233,7 @@ ul {
   font-size: 13px;
   line-height: 1.35;
   color: var(--text-secondary);
-  margin-top: 6px;
+  margin-top: 4px;
   text-align: center;
   max-width: 85%;
   margin-left: auto;
