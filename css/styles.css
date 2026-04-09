@@ -244,20 +244,22 @@ ul {
 }
 
 .title-accent {
-  display: block;
+  display: inline-block;
   color: var(--text-primary);
   white-space: nowrap;
   font-family: 'Oswald', 'Bebas Neue', sans-serif;
   font-weight: 700;
-  font-size: min(8vw, 38px);
+  font-size: 30px; /* стартовое — JS подгонит под ширину .title-sub */
   letter-spacing: 0;
   line-height: 1;
+  align-self: center;
 }
 
 .title-sub {
-  display: block;
+  display: inline-block;
   color: var(--accent);
   white-space: nowrap;
+  align-self: center;
   text-shadow:
     0.5px 0 0 var(--accent),
     -0.5px 0 0 var(--accent),
