@@ -337,7 +337,7 @@ ul {
 .layer.badge {
   z-index: 2;
   width: 22%;
-  bottom: 16%;
+  bottom: 22%;
   left: 72%;
   animation: badgeFloat 4s ease-in-out infinite, badgePulse 3s ease-in-out infinite;
 }
