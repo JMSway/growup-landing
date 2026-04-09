@@ -1968,50 +1968,40 @@ ul {
     radial-gradient(ellipse 80% 30% at 50% 50%, rgba(232, 101, 26, 0.06), transparent 75%);
 }
 
-/* --- Заголовок (квадратный текст) --- */
+/* --- Заголовок (квадратный текст, как в референсе) --- */
 .outcome-headline-wrap {
   display: flex;
   justify-content: center;
   margin-bottom: 22px;
+  padding: 0 4px;
 }
 
 .outcome-headline {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
+  max-width: 100%;
   font-family: 'Bebas Neue', sans-serif;
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
   color: var(--text-primary);
   letter-spacing: 0.6px;
-  line-height: 1.02;
+  line-height: 1.04;
 }
 
 .outcome-line {
   display: block;
-  white-space: nowrap;
-  font-size: clamp(20px, 6vw, 26px);
+  font-size: clamp(17px, 5.2vw, 23px);
+  overflow-wrap: break-word;
 }
 
-.outcome-soft {
+.outcome-line--accent {
   color: var(--accent);
   text-shadow:
-    0 0 10px rgba(232, 101, 26, 0.45),
-    0 0 22px rgba(232, 101, 26, 0.2);
-}
-
-.outcome-money {
-  margin: 6px 0 4px;
-  font-size: clamp(44px, 13vw, 60px);
-  letter-spacing: 1.2px;
-  line-height: 0.95;
-  color: var(--accent);
-  text-shadow:
-    0 0 18px rgba(232, 101, 26, 0.5),
-    0 0 42px rgba(232, 101, 26, 0.25);
-  filter: drop-shadow(0 4px 14px rgba(232, 101, 26, 0.3));
+    0 0 12px rgba(232, 101, 26, 0.45),
+    0 0 28px rgba(232, 101, 26, 0.22);
 }
 
 /* --- Карточка с иллюстрацией и чеками --- */
@@ -2106,12 +2096,12 @@ ul {
 }
 
 .outcome-icon--bad {
-  background: rgba(201, 83, 15, 0.12);
-  border: 2px solid rgba(201, 83, 15, 0.55);
+  background: rgba(154, 144, 136, 0.08);
+  border: 2px solid rgba(154, 144, 136, 0.5);
 }
 
 .outcome-icon--bad iconify-icon {
-  color: #C9530F;
+  color: var(--text-secondary);
 }
 
 .outcome-icon--good {
@@ -2155,8 +2145,7 @@ ul {
 }
 
 @media (max-width: 360px) {
-  .outcome-line { font-size: 18px; }
-  .outcome-money { font-size: 40px; }
+  .outcome-line { font-size: 16px; }
   .outcome-label { font-size: 24px; }
 }
 
