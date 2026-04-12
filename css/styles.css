@@ -462,7 +462,7 @@ ul {
   width: 100%;
   text-align: left;
   padding-bottom: 6px;
-  margin-top: -90px;           /* поднимаем поверх чемодана */
+  margin-top: -50px;
 }
 
 .hero-bottom .hero-bullets {
