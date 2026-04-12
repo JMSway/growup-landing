@@ -36,8 +36,8 @@ if (document.fonts && document.fonts.ready) {
 }
 window.addEventListener('resize', fitHeroTitle);
 
-/* Outcome headline: каждую строку подгоняем под ширину обёртки (как hero title) */
-function fitOutcomeHeadline() {
+/* Outcome headline: uniform size, no auto-fit (disabled — using CSS clamp instead) */
+function fitOutcomeHeadline() { return; /* disabled */
   var wrap = document.querySelector('.outcome-headline-wrap');
   var lines = document.querySelectorAll('.outcome-headline .outcome-line');
   if (!wrap || !lines.length) return;
