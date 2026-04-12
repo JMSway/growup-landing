@@ -2120,6 +2120,7 @@ ul {
 #step-1 .step-choices li iconify-icon { width: 15px; height: 15px; font-size: 15px; }
 #step-1 .step-obvious { margin-top: 10px; font-size: 12px; }
 #step-1 .step-image-caption { font-size: 9px; margin-top: 4px; }
+#step-1 > .step-card > .step-image { width: 85%; }
 #step-1 .step-result { margin-top: 16px; padding: 12px 12px; }
 #step-1 .step-result-text { font-size: 11px; }
 #step-1 .step-result-text strong { font-size: clamp(8px, 2.5vw, 11px); }
