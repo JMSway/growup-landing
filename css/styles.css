@@ -1977,8 +1977,22 @@ ul {
 }
 
 .choice-good strong {
-  color: var(--accent);
-  font-weight: 700;
+  font-weight: 800;
+  background: linear-gradient(90deg, #F2EDE8, #FFFFFF, #E8E0D8, #FFFFFF, #F2EDE8);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: growupWhiteShimmer 5s ease-in-out infinite;
+}
+
+[data-theme="light"] .choice-good strong {
+  background: linear-gradient(90deg, #1A1510, #3A3530, #1A1510, #2A2520, #1A1510);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: growupWhiteShimmer 5s ease-in-out infinite;
 }
 
 .step-choices li iconify-icon {
@@ -2102,7 +2116,7 @@ ul {
 #step-1 .step-example-icon { font-size: 18px; }
 #step-1 .step-question { font-size: clamp(11px, 3vw, 13px); }
 #step-1 .step-choices { gap: 8px; margin-top: 10px; }
-#step-1 .step-choices li { font-size: 11px; gap: 8px; }
+#step-1 .step-choices li { font-size: 12px; gap: 8px; }
 #step-1 .step-choices li iconify-icon { width: 15px; height: 15px; font-size: 15px; }
 #step-1 .step-obvious { margin-top: 10px; font-size: 12px; }
 #step-1 .step-image-caption { font-size: 9px; margin-top: 4px; }
