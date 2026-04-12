@@ -2222,16 +2222,17 @@ ul {
   isolation: isolate;
 }
 
-/* Никакого оранжевого ореола сверху — только лёгкое свечение в центре,
-   далеко от верхней границы (раньше здесь был большой orange gradient,
-   который физически вылезал в Step 3 и создавал «оранжевую линию») */
+/* Оранжевое свечение сверху и снизу для бесшовных стыков */
 .outcome::before {
   content: '';
   position: absolute;
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  background: radial-gradient(ellipse 70% 30% at 50% 60%, rgba(232, 101, 26, 0.05), transparent 75%);
+  background:
+    radial-gradient(ellipse 90% 14% at 50% 0%, rgba(232, 101, 26, 0.12), transparent 75%),
+    radial-gradient(ellipse 70% 30% at 50% 50%, rgba(232, 101, 26, 0.05), transparent 75%),
+    radial-gradient(ellipse 90% 14% at 50% 100%, rgba(232, 101, 26, 0.1), transparent 75%);
 }
 
 /* --- Заголовок (квадратный текст, шрифт как в hero «Как языковой школе») --- */
