@@ -478,9 +478,10 @@ ul {
 .hero-bottom .hero-bullets .bullet-success span {
   font-family: 'Gilroy', sans-serif;
   font-weight: 700;
-  font-size: 14px;
+  font-size: clamp(12px, 3.5vw, 14px);
   line-height: 1.5;
   color: var(--text-primary);
+  white-space: nowrap;
   text-shadow: 0 1px 6px rgba(0, 0, 0, 0.7), 0 2px 12px rgba(0, 0, 0, 0.4);
 }
 
