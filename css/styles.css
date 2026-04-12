@@ -1334,7 +1334,7 @@ ul {
 }
 
 .step-intro {
-  text-align: justify;
+  text-align: left;
   flex: 1;
   margin-top: 0;
 }
