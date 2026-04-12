@@ -234,13 +234,14 @@ ul {
   color: var(--text-primary);
   text-transform: uppercase;
   letter-spacing: 0.2px;
-  text-align: center;
+  text-align: left;
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding: 14px 20px 0;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;    /* все 3 линии начинаются с одного левого края */
   gap: 12px;
 }
 
@@ -253,15 +254,13 @@ ul {
   font-size: 30px; /* стартовое — JS подгонит под ширину .title-sub */
   letter-spacing: 0;
   line-height: 1;
-  align-self: center;
 }
 
 .title-sub {
   display: inline-block;
   color: var(--accent);
   white-space: nowrap;
-  align-self: center;
-  font-size: clamp(17px, 5vw, 24px);   /* чуть меньше — даёт место по бокам */
+  font-size: clamp(18px, 5.3vw, 26px);
   text-shadow:
     0.5px 0 0 var(--accent),
     -0.5px 0 0 var(--accent),
@@ -275,10 +274,9 @@ ul {
   line-height: 1.4;
   color: var(--text-primary);
   margin-top: 12px;
-  text-align: center;
+  text-align: left;
   white-space: nowrap;
-  margin-left: auto;
-  margin-right: auto;
+  padding-left: 20px;
 }
 
 .growup-grow,
