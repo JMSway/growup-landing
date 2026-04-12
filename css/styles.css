@@ -238,7 +238,7 @@ ul {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding: 14px 20px 0;
+  padding: 14px 22px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -460,24 +460,30 @@ ul {
   position: relative;
   z-index: 10;
   width: 100%;
-  text-align: center;
+  text-align: left;
   padding-bottom: 6px;
-  margin-top: -50px;
+  margin-top: -90px;           /* поднимаем поверх чемодана */
 }
 
 .hero-bottom .hero-bullets {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
   margin-bottom: 6px;
+  padding-left: 14px;
 }
 
 .hero-bottom .hero-bullets .bullet-success span {
   font-family: 'Gilroy', sans-serif;
   font-weight: 500;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.5;
-  color: var(--text-primary);
+  color: #FFFFFF;
+}
+
+.hero-bottom .hero-bullets .bullet-success span strong {
+  font-weight: 800;
+  color: #FFFFFF;
 }
 
 .hero-highlight {
