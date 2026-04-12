@@ -2169,7 +2169,7 @@ ul {
 #step-2 .step-result-text,
 #step-3 .step-result-text { font-size: 11px; }
 #step-2 .step-result-text strong,
-#step-3 .step-result-text strong { font-size: clamp(8px, 2.5vw, 11px); }
+#step-3 .step-result-text strong { font-size: clamp(16px, 4.8vw, 20px); font-family: 'Gilroy', sans-serif; font-weight: 800; }
 /* Шаг 2 специфичные */
 #step-2 .step-intro-icon { font-size: 34px; }
 #step-2 .step-tpu-block { padding: 10px 12px; margin-top: 14px; }
