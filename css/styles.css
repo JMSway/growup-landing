@@ -469,7 +469,7 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  margin-top: -30px;              /* буллиты поднимаем наверх */
+  margin-top: -65px;              /* буллиты поднимаем поверх чемодана */
   margin-bottom: 6px;
   padding-left: 16px;
   text-align: left;               /* только буллиты по левому краю */
