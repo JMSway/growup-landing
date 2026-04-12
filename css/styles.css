@@ -505,6 +505,22 @@ ul {
   font-weight: 800;
 }
 
+/* Градиент-переливание на «Grow Up» — два оттенка оранжевого */
+.hero-growup-shimmer {
+  background: linear-gradient(90deg, #E8651A, #F5923A, #E8651A, #C9530F, #E8651A);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: growupShimmer 4s ease-in-out infinite;
+}
+
+@keyframes growupShimmer {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 .hero-highlight-sub {
   font-family: 'Gilroy', sans-serif;
   font-weight: 700;
