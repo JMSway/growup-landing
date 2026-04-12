@@ -258,13 +258,14 @@ ul {
 
 .title-sub {
   display: inline-block;
-  color: var(--accent);
   white-space: nowrap;
   font-size: clamp(19px, 5.5vw, 27px);
-  text-shadow:
-    0.5px 0 0 var(--accent),
-    -0.5px 0 0 var(--accent),
-    0 0.5px 0 var(--accent);
+  background: linear-gradient(90deg, #E8651A, #F5923A, #E8651A, #C9530F, #E8651A);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: growupShimmer 6s ease-in-out infinite;
 }
 
 .hero-subtitle {
@@ -512,7 +513,7 @@ ul {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: growupShimmer 4s ease-in-out infinite;
+  animation: growupShimmer 6s ease-in-out infinite;
 }
 
 @keyframes growupShimmer {
