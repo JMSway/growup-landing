@@ -259,13 +259,17 @@ ul {
 .title-sub {
   display: inline-block;
   white-space: nowrap;
+  font-family: 'Oswald', 'Bebas Neue', sans-serif;
+  font-weight: 700;
   font-size: clamp(19px, 5.5vw, 27px);
+  letter-spacing: 0;
+  line-height: 1;
   background: linear-gradient(90deg, #E8651A, #F5923A, #E8651A, #C9530F, #E8651A);
   background-size: 300% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: growupShimmer 6s ease-in-out infinite;
+  animation: growupShimmer 5s ease-in-out infinite;
 }
 
 .hero-subtitle {
@@ -513,7 +517,7 @@ ul {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: growupShimmer 6s ease-in-out infinite;
+  animation: growupShimmer 5s ease-in-out infinite;
 }
 
 @keyframes growupShimmer {
