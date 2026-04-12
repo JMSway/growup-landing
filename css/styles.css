@@ -460,7 +460,7 @@ ul {
   position: relative;
   z-index: 10;
   width: 100%;
-  text-align: left;
+  text-align: center;             /* остальные элементы по центру */
   padding-bottom: 6px;
   margin-top: -50px;
 }
@@ -469,8 +469,10 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  margin-top: -30px;              /* буллиты поднимаем наверх */
   margin-bottom: 6px;
-  padding-left: 14px;
+  padding-left: 16px;
+  text-align: left;               /* только буллиты по левому краю */
 }
 
 .hero-bottom .hero-bullets .bullet-success span {
