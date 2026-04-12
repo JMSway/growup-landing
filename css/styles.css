@@ -753,6 +753,12 @@ ul {
 
 .case-list li strong {
   font-weight: 700;
+  background: linear-gradient(90deg, #F2EDE8, #FFFFFF, #D4CEC8, #FFFFFF, #F2EDE8);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: growupWhiteShimmer 5s ease-in-out infinite;
 }
 
 /* --- Скриншоты-доказательства (справа снизу) --- */
