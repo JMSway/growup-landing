@@ -2141,7 +2141,7 @@ ul {
 #step-1 > .step-card > .step-image { width: 85%; }
 #step-1 .step-result { margin-top: 16px; padding: 12px 12px; }
 #step-1 .step-result-text { font-size: 11px; }
-#step-1 .step-result-text strong { font-size: clamp(8px, 2.5vw, 11px); }
+#step-1 .step-result-text strong { font-size: clamp(14px, 4.2vw, 17px); font-family: 'Gilroy', sans-serif; font-weight: 800; }
 #step-1 .step-pointer iconify-icon { font-size: 15px; }
 
 /* ============================================
