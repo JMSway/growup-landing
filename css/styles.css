@@ -1617,6 +1617,14 @@ ul {
   height: 27%;
 }
 
+/* Hand-drawn oval for Step 3 chat screenshot */
+.step-oval-3 .hand-drawn-oval {
+  top: 72%;
+  left: 3%;
+  width: 94%;
+  height: 22%;
+}
+
 /* Чат шага 2 — без парения */
 .step-image-chat {
   width: 82%;
