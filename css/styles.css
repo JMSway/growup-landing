@@ -2331,14 +2331,17 @@ ul {
   animation: growupShimmer 5s ease-in-out infinite;
 }
 
-.ls-dots {
+.ls-dots-wrap {
   display: inline;
   margin-left: 1px;
+  /* Override parent's gradient text — dots get their own color */
+  -webkit-text-fill-color: #E8651A;
 }
 
 .ls-dot {
   display: inline-block;
   opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
 .ls-dot:nth-child(1) { opacity: 1; }
