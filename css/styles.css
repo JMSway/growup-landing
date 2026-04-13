@@ -3036,6 +3036,10 @@ ul {
   -webkit-tap-highlight-color: transparent;
 }
 
+.price-cta.btn-nudge {
+  animation: btnNudge 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97);
+}
+
 .price-cta:active {
   filter: brightness(0.9);
 }
@@ -3138,8 +3142,15 @@ ul {
   animation: slideUpBounce 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
+/* After entrance done, switch to static positioning */
+.floating-wa.is-bar.entrance-done {
+  animation: none;
+  opacity: 1;
+  transform: translateX(0);
+}
+
 /* Periodic nudge to remind user */
-.floating-wa.is-bar.wa-nudge {
+.floating-wa.is-bar.entrance-done.wa-nudge {
   animation: waNudge 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97);
 }
 
@@ -3632,7 +3643,7 @@ a.bonus-card:active {
 }
 
 .guarantee-shield img {
-  width: 188px;
+  width: 160px;
   height: auto;
   filter: drop-shadow(0 0 30px rgba(232, 101, 26, 0.35)) drop-shadow(0 0 60px rgba(232, 101, 26, 0.15));
 }
@@ -3672,6 +3683,12 @@ a.bonus-card:active {
   max-width: 360px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.guarantee-cta {
+  position: relative;
+  z-index: 2;
+  margin-top: 20px;
 }
 
 .guarantee-quote .text-accent {

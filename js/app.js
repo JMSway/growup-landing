@@ -292,6 +292,21 @@ if (priceCard) {
   strikeIO.observe(priceCard);
 }
 
+/* Periodic nudge for CTA buttons every 4s */
+var priceCta = document.querySelector('.price-cta:not(.guarantee-cta)');
+var guaranteeCta = document.getElementById('guarantee-cta');
+function nudgeBtn(btn) {
+  if (!btn) return;
+  btn.classList.add('btn-nudge');
+  setTimeout(function () { btn.classList.remove('btn-nudge'); }, 600);
+}
+if (priceCta) {
+  setInterval(function () { nudgeBtn(priceCta); }, 4000);
+}
+if (guaranteeCta) {
+  setInterval(function () { nudgeBtn(guaranteeCta); }, 4000);
+}
+
 /* Floating WA icon swap: Gift when in BonusesSection, Shield when in GuaranteeSection */
 var floatingWaEl = document.getElementById('floating-wa');
 var bonusesSec = document.querySelector('[data-section="bonuses"]');
@@ -347,8 +362,13 @@ if (floatingWa && priceSection) {
 
     if (newState === 'bar') {
       floatingWa.classList.add('is-bar');
+      floatingWa.classList.remove('entrance-done');
       if (themeToggle) themeToggle.classList.add('wa-bar-active');
-      // Start periodic nudge after entrance animation
+      // After entrance animation (0.9s), lock position and start nudge
+      setTimeout(function () {
+        if (currentState !== 'bar') return;
+        floatingWa.classList.add('entrance-done');
+      }, 1000);
       clearInterval(nudgeTimer);
       nudgeTimer = setInterval(function () {
         if (currentState !== 'bar') return;
