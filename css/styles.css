@@ -3516,6 +3516,156 @@ a.bonus-card:active {
 }
 
 
+/* ============================================
+   СЕКЦИЯ: ГАРАНТИЯ
+   ============================================ */
+
+.guarantee {
+  position: relative;
+  padding: 48px 20px 40px;
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Ambient orange glows */
+.guarantee::before {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 30%;
+  left: -60px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(232, 101, 26, 0.16) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.guarantee::after {
+  content: '';
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  bottom: 20%;
+  right: -50px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(232, 101, 26, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.guarantee-title {
+  position: relative;
+  z-index: 2;
+  font-family: 'Oswald', 'Bebas Neue', sans-serif;
+  font-weight: 700;
+  font-size: clamp(28px, 8vw, 38px);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--text-primary);
+  line-height: 1.1;
+}
+
+.guarantee-shield-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 24px auto 20px;
+  width: 150px;
+  height: 150px;
+  z-index: 2;
+}
+
+.guarantee-shield-glow {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(232, 101, 26, 0.3) 0%, transparent 65%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.guarantee-shield {
+  position: relative;
+  z-index: 1;
+  font-size: 100px;
+  color: var(--accent);
+  filter: drop-shadow(0 0 20px rgba(232, 101, 26, 0.4));
+  animation: shieldFloat 4s ease-in-out infinite;
+}
+
+@keyframes shieldFloat {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+
+.guarantee-text {
+  position: relative;
+  z-index: 2;
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 400;
+  font-size: clamp(14px, 4vw, 17px);
+  line-height: 1.55;
+  color: var(--text-primary);
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.guarantee-quote {
+  position: relative;
+  z-index: 2;
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(13px, 3.6vw, 16px);
+  line-height: 1.5;
+  color: var(--text-primary);
+  margin-top: 16px;
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.guarantee-quote .text-accent {
+  font-weight: 800;
+  font-style: normal;
+  background: linear-gradient(90deg, #E8651A, #F5923A, #E8651A);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: growupShimmer 5s ease-in-out infinite;
+}
+
+/* Floating WA: Shield when in guarantee section */
+.floating-wa-icon--shield {
+  opacity: 0;
+  transform: scale(0.6) rotate(-20deg);
+}
+
+.floating-wa.in-guarantee .floating-wa-icon--msg {
+  opacity: 0;
+  transform: scale(0.6) rotate(20deg);
+}
+
+.floating-wa.in-guarantee .floating-wa-icon--gift {
+  opacity: 0;
+  transform: scale(0.6) rotate(20deg);
+}
+
+.floating-wa.in-guarantee .floating-wa-icon--shield {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+
 /* Только лёгкое свечение в центре и снизу — БЕЗ верхнего glow
    (иначе step::before снизу + outcome::before сверху суммируются
    и создают яркую оранжевую полосу-стык) */

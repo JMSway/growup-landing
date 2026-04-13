@@ -285,9 +285,10 @@ if (priceCard) {
   strikeIO.observe(priceCard);
 }
 
-/* Floating WA icon swap: Gift when in BonusesSection */
+/* Floating WA icon swap: Gift when in BonusesSection, Shield when in GuaranteeSection */
 var floatingWaEl = document.getElementById('floating-wa');
 var bonusesSec = document.querySelector('[data-section="bonuses"]');
+var guaranteeSec = document.querySelector('[data-section="guarantee"]');
 if (floatingWaEl && bonusesSec) {
   var bonusIconIO = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
@@ -299,6 +300,18 @@ if (floatingWaEl && bonusesSec) {
     });
   }, { threshold: 0.3 });
   bonusIconIO.observe(bonusesSec);
+}
+if (floatingWaEl && guaranteeSec) {
+  var guaranteeIconIO = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) {
+        floatingWaEl.classList.add('in-guarantee');
+      } else {
+        floatingWaEl.classList.remove('in-guarantee');
+      }
+    });
+  }, { threshold: 0.3 });
+  guaranteeIconIO.observe(guaranteeSec);
 }
 
 /* Floating WhatsApp CTA: hidden → bar → circle */
