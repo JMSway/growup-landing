@@ -2351,7 +2351,7 @@ ul {
 #step-2 .step-result,
 #step-3 .step-result { margin-top: 16px; padding: 14px 14px; }
 #step-2 .step-result-text,
-#step-3 .step-result-text { font-size: 17px; font-weight: 500; line-height: 1.55; text-wrap: balance; }
+#step-3 .step-result-text { font-size: 14px; font-weight: 500; line-height: 1.55; text-wrap: balance; }
 #step-2 .step-result-text strong,
 #step-3 .step-result-text strong { font-size: clamp(16px, 4.8vw, 20px); font-family: 'Gilroy', sans-serif; font-weight: 800; }
 /* Шаг 2 специфичные */
