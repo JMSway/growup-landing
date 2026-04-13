@@ -1611,10 +1611,10 @@ ul {
 
 /* Hand-drawn oval for Step 2 chat screenshot */
 .step-oval-2 .hand-drawn-oval {
-  top: 76%;
-  left: 5%;
-  width: 90%;
-  height: 20%;
+  top: 71%;
+  left: 3%;
+  width: 94%;
+  height: 24%;
 }
 
 /* Чат шага 2 — без парения */
@@ -1774,6 +1774,15 @@ ul {
   -webkit-text-fill-color: transparent;
   font-weight: 700;
   animation: growupWhiteShimmer 5s ease-in-out infinite;
+}
+
+.step-result-final .step-accent {
+  background: linear-gradient(90deg, #E8651A, #F5923A, #E8651A, #C9530F, #E8651A);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: growupShimmer 5s ease-in-out infinite;
 }
 
 .step-result-final {
