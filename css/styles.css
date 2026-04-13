@@ -3130,6 +3130,62 @@ ul {
   max-width: 480px;
   margin: 0 auto;
   text-align: center;
+  overflow: hidden;
+}
+
+/* Scattered ambient orange glows */
+.bonuses::before,
+.bonuses::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bonuses::before {
+  width: 180px;
+  height: 180px;
+  top: 12%;
+  left: -60px;
+  background: radial-gradient(circle, rgba(232, 101, 26, 0.18) 0%, transparent 70%);
+}
+
+.bonuses::after {
+  width: 140px;
+  height: 140px;
+  top: 55%;
+  right: -45px;
+  background: radial-gradient(circle, rgba(232, 101, 26, 0.14) 0%, transparent 70%);
+}
+
+.bonuses-cards::before,
+.bonuses-cards::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bonuses-cards {
+  position: relative;
+}
+
+.bonuses-cards::before {
+  width: 100px;
+  height: 100px;
+  bottom: 15%;
+  left: -30px;
+  background: radial-gradient(circle, rgba(232, 101, 26, 0.12) 0%, transparent 70%);
+}
+
+.bonuses-cards::after {
+  width: 120px;
+  height: 120px;
+  top: 30%;
+  right: -35px;
+  background: radial-gradient(circle, rgba(232, 101, 26, 0.10) 0%, transparent 70%);
 }
 
 /* Gift icon */
@@ -3200,7 +3256,7 @@ ul {
 .bonus-num {
   font-family: 'Gilroy', sans-serif;
   font-weight: 800;
-  font-size: 11px;
+  font-size: 14px;
   color: var(--accent);
   text-transform: uppercase;
 }
