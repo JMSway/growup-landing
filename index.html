@@ -22,8 +22,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&display=swap&subset=cyrillic" rel="stylesheet">
-  <!-- Preload critical hero image -->
-  <link rel="preload" href="assets/images/mainPage1/main1-suitcase.webp" as="image" type="image/webp">
+  <!-- Preload critical hero image (LCP element) -->
+  <link rel="preload" href="assets/images/mainPage1/main1-suitcase.webp" as="image" type="image/webp" fetchpriority="high">
   <!-- Prefetch step images (used when scrolling) -->
   <link rel="prefetch" href="assets/images/3steps/2gis-schools-1step.webp" as="image" type="image/webp">
   <link rel="prefetch" href="assets/images/3steps/review-whatsapp-1step.webp" as="image" type="image/webp">
@@ -71,7 +71,7 @@
       </picture>
       <picture class="layer suitcase">
         <source srcset="assets/images/mainPage1/main1-suitcase.webp" type="image/webp">
-        <img src="assets/images/mainPage1/main1-suitcase.png" alt="Чемодан с достопримечательностями мира" loading="eager">
+        <img src="assets/images/mainPage1/main1-suitcase.png" alt="Чемодан с достопримечательностями мира" loading="eager" fetchpriority="high" decoding="async">
       </picture>
       <picture class="layer clouds">
         <source srcset="assets/images/mainPage1/main2-clouds.webp" type="image/webp">
