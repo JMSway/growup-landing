@@ -2607,11 +2607,11 @@ ul {
 
 /* Roll-in animation */
 .outcome-icons.is-rolled .outcome-icon--bad {
-  animation: rollInLeft 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  animation: rollInLeft 1.65s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
 }
 
 .outcome-icons.is-rolled .outcome-icon--good {
-  animation: rollInRight 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0.2s forwards;
+  animation: rollInRight 1.65s cubic-bezier(0.25, 0.1, 0.25, 1) 0.25s forwards;
 }
 
 @keyframes rollInLeft {
