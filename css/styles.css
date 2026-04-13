@@ -3838,17 +3838,17 @@ a.bonus-card:active {
 .faq-heading-image {
   display: block;
   width: auto;
-  max-width: 200px;
+  max-width: 140px;
   height: auto;
   object-fit: contain;
   margin: 0;
   padding: 0;
   animation: shieldFloat 4s ease-in-out infinite;
-  filter: drop-shadow(0 8px 24px rgba(232, 101, 26, 0.25));
+  filter: drop-shadow(0 6px 16px rgba(232, 101, 26, 0.2));
 }
 
 @media (min-width: 768px) {
-  .faq-heading-image { max-width: 240px; }
+  .faq-heading-image { max-width: 160px; }
 }
 
 .faq-title {
