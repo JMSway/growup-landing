@@ -1368,10 +1368,6 @@ ul {
   opacity: 1;
 }
 
-.step .example-toggle-arrow {
-  opacity: 0.4;
-}
-
 .step .step-choices iconify-icon {
   opacity: 1;
 }
@@ -1993,7 +1989,6 @@ ul {
   font-weight: 700;
   font-size: 15px;
   color: var(--accent);
-  opacity: 0.5;
   background: transparent;
   border: 1.5px solid var(--accent);
   border-radius: 12px;
@@ -2738,13 +2733,13 @@ ul {
   display: inline-block;
   font-family: 'Oswald', 'Bebas Neue', sans-serif;
   font-weight: 700;
-  font-size: clamp(16px, 4.8vw, 22px);
+  font-size: clamp(14px, 4.2vw, 19px);
   text-transform: uppercase;
   text-align: center;
   line-height: 1.15;
   letter-spacing: 0.3px;
   white-space: nowrap;
-  padding: 10px 28px;
+  padding: 10px 24px;
   border-radius: 9999px;
   border: 1px solid rgba(232, 101, 26, 0.3);
   background: rgba(232, 101, 26, 0.06);
