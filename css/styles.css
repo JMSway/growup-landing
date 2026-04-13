@@ -2333,6 +2333,7 @@ ul {
   display: block;
   font-size: clamp(15px, 4.6vw, 20px);
   text-align: center;
+  white-space: nowrap;
 }
 
 .outcome-line--accent {

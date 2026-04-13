@@ -36,6 +36,39 @@ if (document.fonts && document.fonts.ready) {
 }
 window.addEventListener('resize', fitHeroTitle);
 
+/* Outcome headline: equalize all lines to the widest via letter-spacing */
+function fitOutcomeLines() {
+  var lines = document.querySelectorAll('.outcome-headline .outcome-line');
+  if (!lines.length) return;
+  // Reset letter-spacing
+  lines.forEach(function (l) { l.style.letterSpacing = '0px'; });
+  // Find the widest line
+  var maxW = 0;
+  lines.forEach(function (l) {
+    var w = l.getBoundingClientRect().width;
+    if (w > maxW) maxW = w;
+  });
+  if (!maxW) return;
+  // Stretch shorter lines
+  lines.forEach(function (l) {
+    var w = l.getBoundingClientRect().width;
+    if (w >= maxW - 0.5) return;
+    var text = l.textContent.replace(/\s/g, '');
+    var charCount = text.length;
+    if (charCount <= 1) return;
+    var extra = (maxW - w) / (charCount - 1);
+    if (extra > 10) extra = 10;
+    l.style.letterSpacing = extra.toFixed(2) + 'px';
+  });
+}
+
+if (document.fonts && document.fonts.ready) {
+  document.fonts.ready.then(fitOutcomeLines);
+} else {
+  window.addEventListener('load', fitOutcomeLines);
+}
+window.addEventListener('resize', fitOutcomeLines);
+
 /* Outcome headline: uniform size, no auto-fit (disabled — using CSS clamp instead) */
 function fitOutcomeHeadline() { return; /* disabled */
   var wrap = document.querySelector('.outcome-headline-wrap');
