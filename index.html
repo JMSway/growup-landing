@@ -21,8 +21,8 @@
   <link rel="preload" href="assets/fonts/Gilroy-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/Gilroy-Medium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/BebasNeue-Regular.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="css/styles.css?v=20260413-73">
-  <link rel="stylesheet" href="css/icons.css?v=20260413-73">
+  <link rel="stylesheet" href="css/styles.css?v=20260413-74">
+  <link rel="stylesheet" href="css/icons.css?v=20260413-74">
 </head>
 <body>
 
@@ -874,11 +874,14 @@
 
     <div class="guarantee-shield-wrap fade-up">
       <div class="guarantee-shield-glow"></div>
-      <iconify-icon icon="lucide:shield-check" class="guarantee-shield"></iconify-icon>
+      <picture class="guarantee-shield">
+        <source srcset="assets/images/guarantee/guard.webp" type="image/webp">
+        <img src="assets/images/guarantee/guard-removebg-preview.png" alt="" width="500" height="469" loading="lazy" decoding="async">
+      </picture>
     </div>
 
     <p class="guarantee-text fade-up">
-      Я&nbsp;уверен в&nbsp;своей технологии и&nbsp;её пользе, поэтому даю безусловную гарантию возврата средств если информация на&nbsp;консультации покажется банальной, и&nbsp;вы&nbsp;захотите возврат то&nbsp;просто напишите мне
+      Я&nbsp;уверен в&nbsp;своей технологии и&nbsp;её пользе, поэтому даю безусловную гарантию возврата средств если информация на&nbsp;консультации <strong>покажется банальной</strong>, и&nbsp;вы&nbsp;<strong>захотите возврат</strong> то&nbsp;просто <strong>напишите мне</strong>
     </p>
 
     <p class="guarantee-quote fade-up">
@@ -898,6 +901,6 @@
   </a>
 
   <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" defer></script>
-  <script src="js/app.js?v=20260413-73" defer></script>
+  <script src="js/app.js?v=20260413-74" defer></script>
 </body>
 </html>

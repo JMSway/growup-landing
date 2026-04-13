@@ -322,6 +322,7 @@ if (floatingWa && priceSection) {
   var hasSeen = false;
   var currentState = 'hidden';
   var rafId = null;
+  var nudgeTimer = null;
 
   var priceIO = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
@@ -340,7 +341,15 @@ if (floatingWa && priceSection) {
     if (newState === 'bar') {
       floatingWa.classList.add('is-bar');
       if (themeToggle) themeToggle.classList.add('wa-bar-active');
+      // Start periodic nudge after entrance animation
+      clearInterval(nudgeTimer);
+      nudgeTimer = setInterval(function () {
+        if (currentState !== 'bar') return;
+        floatingWa.classList.add('wa-nudge');
+        setTimeout(function () { floatingWa.classList.remove('wa-nudge'); }, 600);
+      }, 5000);
     } else if (newState === 'circle') {
+      clearInterval(nudgeTimer);
       floatingWa.classList.add('is-circle');
       if (themeToggle) themeToggle.classList.add('wa-circle-active');
       // Add pulse after entrance animation finishes
