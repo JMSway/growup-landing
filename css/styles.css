@@ -3762,6 +3762,20 @@ a.bonus-card:active {
   z-index: 0;
 }
 
+.faq-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.faq-heading-icon {
+  font-size: 40px;
+  color: var(--accent);
+  animation: shieldFloat 4s ease-in-out infinite;
+}
+
 .faq-title {
   font-family: 'Oswald', 'Bebas Neue', sans-serif;
   font-weight: 700;
@@ -3771,7 +3785,6 @@ a.bonus-card:active {
   line-height: 1.15;
   letter-spacing: 0.02em;
   color: var(--text-primary);
-  margin-bottom: 28px;
 }
 
 .faq-list {
@@ -3902,6 +3915,51 @@ a.bonus-card:active {
   animation-delay: 1.2s;
 }
 
+/* Carousel in FAQ answer 3 */
+.faq-carousel {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  margin: 16px 0 20px;
+  padding: 4px 0;
+}
+
+.faq-carousel::-webkit-scrollbar { display: none; }
+
+.faq-carousel-track {
+  display: flex;
+  gap: 12px;
+  padding: 0 4px;
+}
+
+.faq-carousel-slide {
+  flex: 0 0 78%;
+  scroll-snap-align: start;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(232, 101, 26, 0.2);
+}
+
+.faq-carousel-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.faq-carousel-hint {
+  text-align: center;
+  font-family: 'Gilroy', sans-serif;
+  font-size: 12px;
+  color: var(--accent);
+  opacity: 0.65;
+  margin-top: 6px;
+  letter-spacing: 0.05em;
+}
+
 /* CTA inside FAQ */
 .faq-cta {
   display: flex;
@@ -3988,13 +4046,22 @@ a.bonus-card:active {
   opacity: 0.6;
 }
 
+.footer-tagline {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--text-primary);
+  opacity: 0.5;
+  margin-top: 4px;
+}
+
 .footer-copy {
   font-family: 'Gilroy', sans-serif;
   font-weight: 400;
   font-size: 13px;
   color: var(--text-primary);
   opacity: 0.5;
-  margin-top: 6px;
+  margin-top: 4px;
 }
 
 

@@ -352,11 +352,27 @@ if (floatingWaEl && faqSec) {
 /* FAQ accordion — one open at a time */
 var faqItems = document.querySelectorAll('.faq-item');
 if (faqItems.length) {
+  var faqHasInteracted = false;
+
+  /* Attention pulse on triggers before first interaction */
+  var faqAttentionTimer = setInterval(function () {
+    if (faqHasInteracted) { clearInterval(faqAttentionTimer); return; }
+    faqItems.forEach(function (item, idx) {
+      if (item.classList.contains('is-open')) return;
+      setTimeout(function () {
+        var t = item.querySelector('.faq-trigger');
+        t.classList.add('btn-nudge');
+        setTimeout(function () { t.classList.remove('btn-nudge'); }, 600);
+      }, idx * 400);
+    });
+  }, 4000);
+
   faqItems.forEach(function (item) {
     var trigger = item.querySelector('.faq-trigger');
     var answer = item.querySelector('.faq-answer');
     var inner = item.querySelector('.faq-answer-inner');
     trigger.addEventListener('click', function () {
+      faqHasInteracted = true;
       var wasOpen = item.classList.contains('is-open');
       // Close all
       faqItems.forEach(function (other) {
