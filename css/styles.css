@@ -3118,18 +3118,7 @@ ul {
   width: 150px;
   height: 150px;
   margin: 0 auto;
-}
-
-.bonuses-tinsel {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-8deg);
-  width: 240px;
-  height: 240px;
-  z-index: 0;
-  opacity: 0.8;
-  pointer-events: none;
+  filter: drop-shadow(0 0 30px rgba(232, 101, 26, 0.35)) drop-shadow(0 0 60px rgba(232, 101, 26, 0.15));
 }
 
 .bonuses-pill {
