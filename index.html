@@ -20,8 +20,8 @@
   <link rel="preload" href="assets/fonts/Gilroy-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/Gilroy-Medium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/BebasNeue-Regular.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="css/styles.css?v=20260413-14">
-  <link rel="stylesheet" href="css/icons.css?v=20260413-14">
+  <link rel="stylesheet" href="css/styles.css?v=20260413-15">
+  <link rel="stylesheet" href="css/icons.css?v=20260413-15">
 </head>
 <body>
 
@@ -664,17 +664,27 @@
 
     <!-- Скриншот чата -->
     <div class="looks-simple-chat fade-up">
-      <picture>
-        <source srcset="assets/images/looks-simple/НурланСкрин.webp" type="image/webp">
-        <img src="assets/images/looks-simple/НурланСкрин.jpeg"
-             alt="Отзыв Нурлана — стабильный поток без скидок"
-             loading="lazy" decoding="async">
-      </picture>
+      <div class="ls-chat-wrap">
+        <picture>
+          <source srcset="assets/images/looks-simple/НурланСкрин.webp" type="image/webp">
+          <img src="assets/images/looks-simple/НурланСкрин.jpeg"
+               alt="Отзыв Нурлана — стабильный поток без скидок"
+               loading="lazy" decoding="async">
+        </picture>
+        <svg class="ls-marker-oval" viewBox="0 0 320 90" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <ellipse cx="160" cy="45" rx="152" ry="38"
+                   stroke="#E8651A" stroke-width="2.2" fill="none"
+                   stroke-linecap="round"
+                   stroke-dasharray="4 0"
+                   transform="rotate(-2 160 45)"
+                   opacity="0.85"/>
+        </svg>
+      </div>
     </div>
 
   </section>
 
   <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" defer></script>
-  <script src="js/app.js?v=20260413-14" defer></script>
+  <script src="js/app.js?v=20260413-15" defer></script>
 </body>
 </html>

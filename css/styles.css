@@ -2402,9 +2402,23 @@ ul {
   text-align: center;
 }
 
-.looks-simple-chat picture {
+.ls-chat-wrap {
+  position: relative;
   display: inline-block;
   width: 68%;
+}
+
+.looks-simple-chat picture {
+  display: block;
+}
+
+.ls-marker-oval {
+  position: absolute;
+  bottom: 8%;
+  left: -4%;
+  width: 108%;
+  height: auto;
+  pointer-events: none;
 }
 
 .looks-simple-chat img {
