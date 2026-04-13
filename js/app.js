@@ -385,6 +385,17 @@ if (faqItems.length) {
         item.classList.add('is-open');
         trigger.setAttribute('aria-expanded', 'true');
         answer.style.maxHeight = inner.scrollHeight + 'px';
+        // Recalculate after images load (fixes first-open height bug)
+        var imgs = inner.querySelectorAll('img');
+        imgs.forEach(function (img) {
+          if (!img.complete) {
+            img.addEventListener('load', function () {
+              if (item.classList.contains('is-open')) {
+                answer.style.maxHeight = inner.scrollHeight + 'px';
+              }
+            }, { once: true });
+          }
+        });
         // Scroll to trigger after animation starts
         setTimeout(function () {
           trigger.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -392,6 +403,25 @@ if (faqItems.length) {
       }
     });
   });
+
+  /* Close all FAQ when user scrolls away from section */
+  function closeAllFaq() {
+    faqItems.forEach(function (it) {
+      it.classList.remove('is-open');
+      it.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+      it.querySelector('.faq-answer').style.maxHeight = '0';
+    });
+  }
+
+  var faqSection = document.getElementById('faq');
+  if (faqSection) {
+    var faqCloseIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) closeAllFaq();
+      });
+    }, { threshold: 0 });
+    faqCloseIO.observe(faqSection);
+  }
 }
 
 /* Floating WhatsApp CTA: hidden → bar → circle */
