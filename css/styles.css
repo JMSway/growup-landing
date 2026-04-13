@@ -2317,56 +2317,69 @@ ul {
 #step-1 .step-pointer iconify-icon { font-size: 15px; }
 
 /* ============================================
-   ШАГ 2 + ШАГ 3 — те же размеры что и Шаг 1
+   ШАГ 2 + ШАГ 3 — unified 5-level font scale (same as Step 1)
+   H1(22) Lead(17) Body(15) Small(14) Caption(11)
    ============================================ */
 #step-2,
 #step-3 { padding-bottom: 48px; }
 #step-2 .step-card,
 #step-3 .step-card { padding: 18px 14px; }
+/* Body — base text (13→15) */
 #step-2 .step-text,
-#step-3 .step-text { font-size: 13px; margin-top: 10px; }
+#step-3 .step-text { font-size: 15px; margin-top: 10px; line-height: 1.55; }
+/* Lead — intro (14→17) */
 #step-2 .step-intro,
-#step-3 .step-intro { font-size: 14px; text-align: center; color: var(--text-primary); }
+#step-3 .step-intro { font-size: 17px; text-align: center; color: var(--text-primary); font-weight: 500; line-height: 1.55; }
+/* Small — bullet lists (12→14) */
 #step-2 .step-list,
 #step-3 .step-list { gap: 6px; margin-top: 8px; }
 #step-2 .step-list li,
-#step-3 .step-list li { font-size: 12px; padding-left: 22px; color: var(--text-primary); }
+#step-3 .step-list li { font-size: 14px; padding-left: 22px; color: var(--text-primary); }
+/* Images */
 #step-2 .step-image-wrap,
 #step-3 .step-image-wrap { margin: 12px auto 4px; }
 #step-2 .step-image,
 #step-3 .step-image { margin: 12px auto 4px; }
 #step-2 .step-image-chat,
 #step-3 .step-image-chat { width: 74%; }
+/* Lead — highlight (13→17) */
 #step-2 .step-highlight,
-#step-3 .step-highlight { padding: 10px 12px; margin-top: 12px; }
+#step-3 .step-highlight { padding: 10px 12px; margin-top: 12px; font-size: 17px; font-weight: 500; line-height: 1.55; }
 #step-2 .step-pointer iconify-icon,
 #step-3 .step-pointer iconify-icon { font-size: 15px; }
+/* Lead — result (11→17) */
 #step-2 .step-result,
-#step-3 .step-result { margin-top: 16px; padding: 12px 12px; }
+#step-3 .step-result { margin-top: 16px; padding: 14px 14px; }
 #step-2 .step-result-text,
-#step-3 .step-result-text { font-size: 11px; }
+#step-3 .step-result-text { font-size: 17px; font-weight: 500; line-height: 1.55; text-wrap: balance; }
 #step-2 .step-result-text strong,
 #step-3 .step-result-text strong { font-size: clamp(16px, 4.8vw, 20px); font-family: 'Gilroy', sans-serif; font-weight: 800; }
 /* Шаг 2 специфичные */
 #step-2 .step-intro-icon { font-size: 34px; }
 #step-2 .step-tpu-block { padding: 10px 12px; margin-top: 14px; }
 #step-2 .step-tpu-icon { font-size: 18px; }
-#step-2 .step-tpu-line-1 { font-size: 11px; }
-#step-2 .step-tpu-line-2 { font-size: clamp(11px, 3.2vw, 13px); }
-#step-2 .step-tpu-label { font-size: clamp(12px, 3.6vw, 14px); margin-top: 12px; }
-#step-2 .step-list-bullets li { font-size: 12px; }
+/* Body — TPU lines (11-13→14-15) */
+#step-2 .step-tpu-line-1 { font-size: 14px; }
+#step-2 .step-tpu-line-2 { font-size: 15px; }
+/* Body — TPU label (12-14→15) */
+#step-2 .step-tpu-label { font-size: 15px; margin-top: 12px; }
+/* Small — bullet list (12→14) */
+#step-2 .step-list-bullets li { font-size: 14px; }
 #step-2 .step-compare { margin-top: 12px; gap: 8px; }
 /* Шаг 3 специфичные */
 #step-3 .step-headline { font-size: clamp(16px, 4.6vw, 22px); margin: 2px 0 6px; }
 #step-3 .step-headline-icon { font-size: 30px; }
-#step-3 .step-subhead { margin-top: 14px; gap: 8px; }
+/* Body — subhead (13→15) */
+#step-3 .step-subhead { margin-top: 14px; gap: 8px; font-size: 15px; }
 #step-3 .step-subhead-icon { font-size: 18px; }
+/* Small — large list (already 14 ✓) */
 #step-3 .step-list-large li { font-size: 14px; }
 #step-3 .step-main-line { margin-top: 14px; }
 #step-3 .step-main-line-label { font-size: clamp(16px, 4.6vw, 22px); margin-bottom: 6px; }
 #step-3 .step-main-line-icon { font-size: 22px; }
-#step-3 .step-result-row { font-size: clamp(11px, 3.2vw, 13px); }
-#step-3 .step-result-final { font-size: clamp(16px, 5vw, 24px); margin-top: 6px; padding-top: 8px; }
+/* Body — result rows (11-13→15) */
+#step-3 .step-result-row { font-size: 15px; }
+#step-3 .step-result-final { font-size: clamp(18px, 5.5vw, 26px); margin-top: 6px; padding-top: 8px; }
 
 [data-theme="light"] .step-card {
   border-color: transparent;
