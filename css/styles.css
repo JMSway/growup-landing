@@ -3320,6 +3320,40 @@ ul {
   color: var(--accent);
   vertical-align: middle;
   margin-left: 4px;
+  display: inline-block;
+  animation: giftWiggle 2.5s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+.bonus-card:nth-child(2) .bonus-icon {
+  animation-delay: 0.8s;
+}
+
+.bonus-card:nth-child(3) .bonus-icon {
+  animation-delay: 1.6s;
+}
+
+@keyframes giftWiggle {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  15% { transform: rotate(-12deg) scale(1.1); }
+  30% { transform: rotate(10deg) scale(1.15); }
+  45% { transform: rotate(-8deg) scale(1.1); }
+  55% { transform: rotate(0deg) scale(1); }
+}
+
+/* Clickable bonus cards */
+a.bonus-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+a.bonus-card:active {
+  transform: scale(0.98);
+  border-color: var(--accent);
+  box-shadow: 0 0 20px rgba(232, 101, 26, 0.2);
 }
 
 .bonus-name {
