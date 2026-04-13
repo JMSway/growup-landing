@@ -197,6 +197,23 @@ if (exAccordion && exToggle && exBody) {
   exIO.observe(exAccordion);
 }
 
+/* Outcome icons: roll-in wheel animation, re-trigger on re-entry */
+var outcomeIcons = document.querySelector('.outcome-icons');
+if (outcomeIcons) {
+  var rollIO = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) {
+        outcomeIcons.classList.remove('is-rolled');
+        void outcomeIcons.offsetWidth;
+        outcomeIcons.classList.add('is-rolled');
+      } else {
+        outcomeIcons.classList.remove('is-rolled');
+      }
+    });
+  }, { threshold: 0.3 });
+  rollIO.observe(outcomeIcons);
+}
+
 /* Bridge: light up words on scroll, fade back, re-trigger on re-entry */
 var bridge = document.querySelector('.bridge');
 if (bridge) {

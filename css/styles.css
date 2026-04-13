@@ -2585,7 +2585,8 @@ ul {
 .outcome-icon--bad {
   background: rgba(154, 144, 136, 0.08);
   border: 2px solid rgba(154, 144, 136, 0.5);
-  transform: translateX(34px) rotate(-10deg);  /* сильно направо + наклон */
+  transform: translateX(34px) rotate(-10deg);
+  opacity: 0;
 }
 
 .outcome-icon--bad iconify-icon {
@@ -2596,11 +2597,91 @@ ul {
   background: rgba(232, 101, 26, 0.14);
   border: 2px solid rgba(232, 101, 26, 0.65);
   box-shadow: 0 0 18px rgba(232, 101, 26, 0.25);
-  transform: translateX(-34px);                /* сильно налево */
+  transform: translateX(-34px);
+  opacity: 0;
 }
 
 .outcome-icon--good iconify-icon {
   color: var(--accent);
+}
+
+/* Roll-in animation */
+.outcome-icons.is-rolled .outcome-icon--bad {
+  animation: rollInLeft 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+.outcome-icons.is-rolled .outcome-icon--good {
+  animation: rollInRight 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0.2s forwards;
+}
+
+@keyframes rollInLeft {
+  0% {
+    transform: translateX(-220px) rotate(0deg) scale(1, 1);
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  70% {
+    transform: translateX(48px) rotate(580deg) scale(1, 1);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(34px) rotate(680deg) scale(1.12, 0.88);
+    opacity: 1;
+  }
+  88% {
+    transform: translateX(34px) rotate(710deg) scale(0.95, 1.05) translateY(-6px);
+  }
+  94% {
+    transform: translateX(34px) rotate(718deg) scale(1.04, 0.96);
+  }
+  100% {
+    transform: translateX(34px) rotate(720deg) scale(1, 1);
+    opacity: 1;
+  }
+}
+
+@keyframes rollInRight {
+  0% {
+    transform: translateX(220px) rotate(0deg) scale(1, 1);
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  70% {
+    transform: translateX(-48px) rotate(-580deg) scale(1, 1);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(-34px) rotate(-680deg) scale(1.12, 0.88);
+    opacity: 1;
+  }
+  88% {
+    transform: translateX(-34px) rotate(-710deg) scale(0.95, 1.05) translateY(-6px);
+  }
+  94% {
+    transform: translateX(-34px) rotate(-718deg) scale(1.04, 0.96);
+  }
+  100% {
+    transform: translateX(-34px) rotate(-720deg) scale(1, 1);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .outcome-icons.is-rolled .outcome-icon--bad,
+  .outcome-icons.is-rolled .outcome-icon--good {
+    animation: none;
+    opacity: 1;
+  }
+  .outcome-icons.is-rolled .outcome-icon--bad {
+    transform: translateX(34px) rotate(-10deg);
+  }
+  .outcome-icons.is-rolled .outcome-icon--good {
+    transform: translateX(-34px);
+  }
 }
 
 /* Скриншоты операций ДО / ПОСЛЕ */
