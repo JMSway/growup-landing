@@ -2337,7 +2337,7 @@ ul {
 #step-3 .step-text { font-size: 15px; margin-top: 10px; line-height: 1.55; }
 /* Lead — intro (14→17) */
 #step-2 .step-intro,
-#step-3 .step-intro { font-size: 15px; text-align: left; color: var(--text-primary); font-weight: 500; line-height: 1.55; }
+#step-3 .step-intro { font-size: 14px; text-align: left; color: var(--text-primary); font-weight: 500; line-height: 1.55; }
 /* Small — bullet lists (12→14) */
 #step-2 .step-list,
 #step-3 .step-list { gap: 6px; margin-top: 8px; }
@@ -2351,7 +2351,7 @@ ul {
 #step-2 .step-image-chat,
 #step-3 .step-image-chat { width: 74%; }
 /* Lead — highlight (13→17) */
-#step-2 .step-highlight { padding: 10px 12px; margin-top: 12px; font-size: 15px; font-weight: 500; line-height: 1.55; }
+#step-2 .step-highlight { padding: 10px 12px; margin-top: 12px; font-size: 14px; font-weight: 500; line-height: 1.55; }
 #step-3 .step-highlight { padding: 10px 12px; margin-top: 12px; font-size: 14px; font-weight: 500; line-height: 1.55; }
 #step-2 .step-pointer iconify-icon,
 #step-3 .step-pointer iconify-icon { font-size: 15px; }
