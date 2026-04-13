@@ -2421,7 +2421,7 @@ ul {
 
 .ls-marker-oval {
   position: absolute;
-  bottom: 8%;
+  bottom: -2%;
   left: -4%;
   width: 108%;
   height: auto;
