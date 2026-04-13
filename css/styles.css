@@ -1368,6 +1368,14 @@ ul {
   opacity: 1;
 }
 
+.step .example-toggle-arrow {
+  opacity: 0.4;
+}
+
+.step .step-choices iconify-icon {
+  opacity: 1;
+}
+
 .step-intro-icon {
   flex-shrink: 0;
   font-size: 42px;
@@ -1985,6 +1993,7 @@ ul {
   font-weight: 700;
   font-size: 15px;
   color: var(--accent);
+  opacity: 0.5;
   background: transparent;
   border: 1.5px solid var(--accent);
   border-radius: 12px;
