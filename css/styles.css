@@ -2597,10 +2597,10 @@ ul {
 
 /* Hand-drawn oval for LooksSimple chat screenshot */
 .step-oval-ls .hand-drawn-oval {
-  top: 70%;
-  left: 2%;
-  width: 90%;
-  height: 22%;
+  top: 80%;
+  left: 0%;
+  width: 96%;
+  height: 26%;
 }
 
 .looks-simple-chat img {
