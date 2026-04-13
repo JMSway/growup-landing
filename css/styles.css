@@ -691,7 +691,7 @@ ul {
   font-weight: 400;
   font-size: clamp(10px, 2.9vw, 12px);
   line-height: 1.4;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   margin-top: 6px;
   display: flex;
   flex-direction: column;
@@ -1101,7 +1101,7 @@ ul {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.4;
-  color: var(--text-secondary);
+  color: var(--text-primary);
 }
 
 /* --- Проблемы --- */
@@ -1126,7 +1126,7 @@ ul {
   font-family: 'Gilroy', sans-serif;
   font-weight: 400;
   font-size: 12px;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   text-align: center;
   margin-top: 4px;
 }
@@ -1729,7 +1729,7 @@ ul {
 
 .step-result--3 .step-result-text strong {
   font-family: 'Oswald', 'Bebas Neue', sans-serif;
-  font-size: clamp(20px, 5.6vw, 24px);
+  font-size: clamp(24px, 6.5vw, 30px);
   font-weight: 700;
   letter-spacing: 0.4px;
   text-transform: uppercase;
@@ -2229,7 +2229,7 @@ ul {
 #step-1 { padding-bottom: 48px; }                            /* 60 × 0.82 ≈ 49 */
 #step-1 .step-card { padding: 18px 14px; }                   /* 24/18 × 0.82 */
 #step-1 .step-text { font-size: 13px; margin-top: 10px; }
-#step-1 .step-intro { font-size: clamp(15px, 4.3vw, 18px); text-align: center; color: var(--text-primary); }
+#step-1 .step-intro { font-size: clamp(15px, 4.3vw, 18px); text-align: left; color: var(--text-primary); }
 #step-1 .step-list { gap: 6px; margin-top: 8px; }           /* 8/10 × 0.82 */
 #step-1 .step-list li { font-size: 12px; padding-left: 22px; color: var(--text-primary); }
 #step-1 .step-image-wrap { margin: 12px auto 4px; }         /* 18/6 × 0.82 */
@@ -2446,6 +2446,20 @@ ul {
 }
 
 .looks-simple-text .text-accent {
+  font-weight: 800;
+  background: linear-gradient(90deg, #F2EDE8, #FFFFFF, #E8E0D8, #FFFFFF, #F2EDE8);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: growupWhiteShimmer 5s ease-in-out infinite;
+}
+
+[data-theme="light"] .looks-simple-text .text-accent {
+  background: linear-gradient(90deg, #1A1510, #3A3530, #1A1510, #2A2520, #1A1510);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -2592,6 +2606,20 @@ ul {
 }
 
 .all-answers-text .text-accent {
+  font-weight: 800;
+  background: linear-gradient(90deg, #F2EDE8, #FFFFFF, #E8E0D8, #FFFFFF, #F2EDE8);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: growupWhiteShimmer 5s ease-in-out infinite;
+}
+
+[data-theme="light"] .all-answers-text .text-accent {
+  background: linear-gradient(90deg, #1A1510, #3A3530, #1A1510, #2A2520, #1A1510);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
