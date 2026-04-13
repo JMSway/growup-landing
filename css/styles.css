@@ -2788,21 +2788,34 @@ ul {
   max-width: 480px;
   text-align: center;
   margin: 0 auto;
+  margin-bottom: -1px;
   overflow: hidden;
+}
+
+.price-section::before {
+  content: '';
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  top: 10%;
+  right: -50px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(232, 101, 26, 0.14) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .price-section::after {
   content: '';
   position: absolute;
-  bottom: -40px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 300px;
-  height: 80px;
+  width: 140px;
+  height: 140px;
+  bottom: 15%;
+  left: -45px;
   border-radius: 50%;
-  background: radial-gradient(ellipse at 50% 50%, rgba(232, 101, 26, 0.2) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(232, 101, 26, 0.12) 0%, transparent 70%);
   pointer-events: none;
-  z-index: 1;
+  z-index: 0;
 }
 
 .price-title {
@@ -3200,6 +3213,7 @@ ul {
   margin: 0 auto;
   text-align: center;
   overflow: hidden;
+  box-shadow: 0 -40px 60px -20px rgba(232, 101, 26, 0.15);
 }
 
 /* Scattered ambient orange glows */
@@ -3336,7 +3350,7 @@ ul {
   vertical-align: middle;
   margin-left: 4px;
   display: inline-block;
-  animation: giftWiggle 2.5s ease-in-out infinite;
+  animation: giftWiggle 4s ease-in-out infinite;
   transform-origin: center bottom;
 }
 
@@ -3399,7 +3413,7 @@ a.bonus-card:active {
 .bonus-price-label {
   font-family: 'Gilroy', sans-serif;
   font-weight: 800;
-  font-size: 18px;
+  font-size: 16px;
   color: var(--accent);
   text-transform: uppercase;
 }
