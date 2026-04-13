@@ -2540,6 +2540,139 @@ ul {
 }
 
 
+/* ============================================
+   СЕКЦИЯ: СКОЛЬКО ЭТО ДОЛЖНО СТОИТЬ?
+   ============================================ */
+
+.how-much {
+  position: relative;
+  padding: 48px 20px 40px;
+  max-width: 480px;
+  margin: 0 auto;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Фоновое изображение — рука с монетой */
+.how-much-bg {
+  position: absolute;
+  bottom: -10px;
+  right: -20px;
+  width: 180px;
+  height: 180px;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.18;
+  filter: blur(1px);
+}
+
+.how-much-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.how-much-title {
+  position: relative;
+  z-index: 1;
+  font-family: 'Oswald', 'Bebas Neue', sans-serif;
+  font-weight: 700;
+  font-size: clamp(22px, 6.5vw, 30px);
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.15;
+  letter-spacing: 0.3px;
+  background: linear-gradient(90deg, #E8651A, #F5923A, #E8651A, #C9530F, #E8651A);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: growupShimmer 5s ease-in-out infinite;
+}
+
+.how-much-subtitle {
+  position: relative;
+  z-index: 1;
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 600;
+  font-size: clamp(14px, 3.8vw, 17px);
+  color: var(--text-primary);
+  text-align: center;
+  margin-top: 10px;
+}
+
+.how-much-card {
+  position: relative;
+  z-index: 1;
+  margin-top: 22px;
+  padding: 20px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(232, 101, 26, 0.15);
+  background: rgba(23, 22, 20, 0.65);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.how-much-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.how-much-icon {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  font-size: 26px;
+  color: var(--accent);
+  margin-top: 1px;
+}
+
+.how-much-text {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 400;
+  font-size: clamp(13px, 3.6vw, 15px);
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
+.how-much-text .text-accent {
+  -webkit-text-fill-color: transparent;
+}
+
+.how-much-closing {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin-top: 28px;
+}
+
+.how-much-closing-text {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 600;
+  font-size: clamp(15px, 4.2vw, 18px);
+  color: var(--text-primary);
+}
+
+.how-much-closing-nums {
+  font-family: 'Oswald', 'Bebas Neue', sans-serif;
+  font-weight: 700;
+  font-size: clamp(26px, 7.5vw, 36px);
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-top: 8px;
+  background: linear-gradient(90deg, #E8651A, #F5923A, #E8651A, #C9530F, #E8651A);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: growupShimmer 5s ease-in-out infinite;
+}
+
+
 /* Только лёгкое свечение в центре и снизу — БЕЗ верхнего glow
    (иначе step::before снизу + outcome::before сверху суммируются
    и создают яркую оранжевую полосу-стык) */
