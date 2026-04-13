@@ -2291,6 +2291,98 @@ ul {
   isolation: isolate;
 }
 
+/* ============================================
+   СЕКЦИЯ: ВЫГЛЯДИТ ПРОСТО, НО...
+   ============================================ */
+
+.looks-simple {
+  position: relative;
+  padding: 48px 20px 40px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.looks-simple-title {
+  font-family: 'Oswald', 'Bebas Neue', sans-serif;
+  font-weight: 700;
+  font-size: clamp(24px, 7vw, 32px);
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.15;
+  letter-spacing: 0.3px;
+  background: linear-gradient(90deg, #E8651A, #F5923A, #E8651A, #C9530F, #E8651A);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: growupShimmer 5s ease-in-out infinite;
+}
+
+.looks-simple-subtitle {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 600;
+  font-size: clamp(13px, 3.6vw, 16px);
+  color: var(--text-primary);
+  text-align: center;
+  margin-top: 12px;
+  letter-spacing: 0.2px;
+}
+
+.looks-simple-card {
+  margin-top: 20px;
+  padding: 24px 18px;
+  background: var(--bg-card);
+  border-radius: 16px;
+  border: 1px solid rgba(232, 101, 26, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.looks-simple-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.looks-simple-num {
+  font-family: 'Oswald', 'Bebas Neue', sans-serif;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 0.9;
+  background: linear-gradient(180deg, #F5923A, #E8651A);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  flex-shrink: 0;
+  min-width: 28px;
+}
+
+.looks-simple-text {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 400;
+  font-size: clamp(13px, 3.6vw, 15px);
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
+.looks-simple-text .text-accent {
+  -webkit-text-fill-color: transparent;
+}
+
+.looks-simple-chat {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.looks-simple-chat img {
+  width: 65%;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+
 /* Только лёгкое свечение в центре и снизу — БЕЗ верхнего glow
    (иначе step::before снизу + outcome::before сверху суммируются
    и создают яркую оранжевую полосу-стык) */
