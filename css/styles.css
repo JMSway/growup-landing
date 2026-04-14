@@ -2017,30 +2017,12 @@ ul {
   animation-delay: -3s;
 }
 
-/* Оранжевый кружок поверх "Места 1320" */
-.step-image-circle {
-  position: absolute;
-  top: 10%;
-  right: 1%;
-  width: 22%;
-  aspect-ratio: 1.7 / 1;
-  border: 2.5px solid var(--accent);
-  border-radius: 50%;
-  pointer-events: none;
-  transform: rotate(-8deg);
-  box-shadow: 0 0 12px rgba(232, 101, 26, 0.5);
-  animation: stepCirclePulse 2.5s ease-in-out infinite;
-}
-
-@keyframes stepCirclePulse {
-  0%, 100% {
-    box-shadow: 0 0 8px rgba(232, 101, 26, 0.4);
-    border-color: rgba(232, 101, 26, 0.7);
-  }
-  50%      {
-    box-shadow: 0 0 18px rgba(232, 101, 26, 0.8);
-    border-color: var(--accent);
-  }
+/* Hand-drawn oval for 2GIS screenshot — over "Места NNN" badge (top-right) */
+.step-oval-2gis .hand-drawn-oval {
+  top: 4%;
+  left: 60%;
+  width: 38%;
+  height: 22%;
 }
 
 .step-image img {
