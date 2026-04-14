@@ -1072,7 +1072,7 @@ ul {
   flex-shrink: 0;
   width: 110px;
   height: 110px;
-  border-radius: 50%;
+  border-radius: 20px;
   overflow: hidden;
   box-shadow:
     0 4px 16px rgba(0, 0, 0, 0.35),
@@ -1097,11 +1097,13 @@ ul {
 
 .expert-name-inline {
   font-family: 'Oswald', sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: clamp(18px, 5vw, 21px);
   color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
   display: block;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 .expert-highlight {
