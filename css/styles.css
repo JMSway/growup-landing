@@ -2227,15 +2227,19 @@ ul {
   margin-top: 14px;
 }
 
-/* Итог шага — badge + text, без карточки */
+/* Итог шага — badge + text, тонкая оранжевая обводка */
 .step-result {
   margin-top: 22px;
-  padding: 24px 20px;
+  padding: 23px 19px; /* 24px 20px минус 1px border */
   max-width: 100%;
   box-sizing: border-box;
   text-align: left;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  background: rgba(232, 101, 26, 0.03);
+  border: 1px solid rgba(232, 101, 26, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 0 24px rgba(232, 101, 26, 0.08);
 }
 
 .step-result__badge {
@@ -2269,13 +2273,13 @@ ul {
 }
 
 @media (min-width: 768px) {
-  .step-result { padding: 32px 28px; }
+  .step-result { padding: 31px 27px; }
   .step-result__badge { font-size: 17px; padding: 10px 22px; }
   .step-result__text { font-size: 20px; line-height: 1.45; }
 }
 
 @media (max-width: 360px) {
-  .step-result { padding: 20px 16px; }
+  .step-result { padding: 19px 15px; }
   .step-result__text { font-size: clamp(13px, 4.2vw, 16px); }
 }
 
