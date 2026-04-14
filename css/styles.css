@@ -1070,26 +1070,26 @@ ul {
 
 .expert-photo-wrap {
   flex-shrink: 0;
-  width: 105px;
-  height: 130px;
-  border-radius: 16px;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
   overflow: hidden;
   box-shadow:
     0 4px 16px rgba(0, 0, 0, 0.35),
-    0 0 20px rgba(232, 101, 26, 0.12);
+    0 0 20px rgba(232, 101, 26, 0.18);
 }
 
 .expert-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center 15%;
 }
 
 .expert-story {
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
-  font-size: clamp(14px, 3.9vw, 16px);
+  font-size: clamp(15px, 4vw, 17px);
   line-height: 1.5;
   color: var(--text-primary);
   text-align: left;
@@ -1098,8 +1098,10 @@ ul {
 .expert-name-inline {
   font-family: 'Oswald', sans-serif;
   font-weight: 600;
-  font-size: clamp(18px, 5vw, 20px);
+  font-size: clamp(18px, 5vw, 21px);
   color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
 }
 
 .expert-highlight {
