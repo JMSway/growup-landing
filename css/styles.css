@@ -1466,11 +1466,12 @@ ul {
   text-align: left;
 }
 
-.step-pointer iconify-icon {
-  font-size: 18px;
-  vertical-align: -3px;
-  margin-right: 6px;
-  color: var(--accent);
+.step-pointer iconify-icon,
+.step-intro-icon,
+.step-tpu-icon,
+.step-headline-icon,
+.step-subhead-icon {
+  display: none;
 }
 
 /* Подсветка ключевого тезиса */
@@ -1558,9 +1559,10 @@ ul {
   content: '';
   position: absolute;
   left: 0;
-  top: 0.55em;
-  width: 16px;
-  height: 9px;
+  top: 0.6em;
+  width: 10px;
+  height: 6px;
+  opacity: 0.7;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 8' fill='none'><path d='M1 4 L13 4 M10 1 L13 4 L10 7' stroke='%23E8651A' stroke-width='0.9' stroke-linecap='round' stroke-linejoin='round'/></svg>");
   background-repeat: no-repeat;
   background-size: contain;
@@ -2395,7 +2397,7 @@ ul {
 #step-3 .step-text { font-size: 15px; margin-top: 10px; line-height: 1.55; }
 /* Lead — intro (14→17) */
 #step-2 .step-intro,
-#step-3 .step-intro { font-size: 14px; text-align: left; color: var(--text-primary); font-weight: 500; line-height: 1.55; }
+#step-3 .step-intro { font-size: 16px; text-align: left; color: var(--text-primary); font-weight: 500; line-height: 1.55; }
 /* Small — bullet lists (12→14) */
 #step-2 .step-list,
 #step-3 .step-list { gap: 6px; margin-top: 8px; }
@@ -2436,7 +2438,7 @@ ul {
 #step-3 .step-headline { font-size: clamp(16px, 4.6vw, 22px); margin: 2px 0 6px; }
 #step-3 .step-headline-icon { font-size: 30px; }
 /* Body — subhead (13→15) */
-#step-3 .step-subhead { margin-top: 14px; gap: 8px; font-size: 15px; }
+#step-3 .step-subhead { margin-top: 14px; gap: 8px; font-size: 16px; }
 #step-3 .step-subhead-icon { font-size: 18px; }
 /* Small — large list (already 14 ✓) */
 #step-3 .step-list-large li { font-size: 14px; }
