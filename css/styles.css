@@ -2355,7 +2355,7 @@ ul {
 /* Lead — highlight block */
 #step-1 .step-highlight { padding: 10px 12px; margin-top: 12px; font-size: 17px; font-weight: 500; line-height: 1.55; }
 /* Body — example title */
-#step-1 .step-example-title { font-size: 15px; margin-top: 18px; }
+#step-1 .step-example-title { font-size: 17px; margin-top: 18px; }
 #step-1 .step-example-icon { font-size: 18px; }
 /* Body — accordion question */
 #step-1 .step-question { font-size: 15px; line-height: 1.55; }
