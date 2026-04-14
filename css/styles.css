@@ -886,7 +886,8 @@ ul {
 /* --- Разделитель ДО→ПОСЛЕ (изогнутая стрелка справа→влево) --- */
 .case-divider {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-left: 22%;
   margin: 8px 0 4px;
   animation: caseArrowFloat 2.5s ease-in-out infinite;
 }
@@ -1049,12 +1050,12 @@ ul {
     radial-gradient(ellipse 90% 16% at 50% 100%, rgba(232, 101, 26, 0.14), transparent 75%);
 }
 
-/* --- Фото + имя (горизонтальная карточка, стиль Ainura) --- */
+/* --- Фото + имя (стиль референса: инлайн-история) --- */
 .expert-intro {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
   padding: 16px;
   border-radius: 16px;
   background: var(--bg-card);
@@ -1063,10 +1064,6 @@ ul {
 }
 
 .expert-intro-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 8px;
   flex: 1;
   min-width: 0;
 }
@@ -1074,61 +1071,40 @@ ul {
 .expert-photo-wrap {
   flex-shrink: 0;
   width: 105px;
-  height: 135px;
-  border-radius: 28px;
+  height: 130px;
+  border-radius: 16px;
   overflow: hidden;
   box-shadow:
     0 4px 16px rgba(0, 0, 0, 0.35),
-    0 0 20px rgba(232, 101, 26, 0.15);
+    0 0 20px rgba(232, 101, 26, 0.12);
 }
 
 .expert-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 20%;
 }
 
-.expert-name {
-  font-family: 'Oswald', 'Bebas Neue', sans-serif;
-  font-weight: 700;
-  font-size: clamp(22px, 6vw, 28px);
-  text-transform: uppercase;
-  letter-spacing: 0.3px;
-  line-height: 1.05;
-  background: linear-gradient(90deg, #E8651A, #F5923A, #E8651A, #C9530F, #E8651A);
-  background-size: 300% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: growupShimmer 5s ease-in-out infinite;
-  text-align: left;
-}
-
-.expert-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
+.expert-story {
   font-family: 'Gilroy', sans-serif;
-  font-weight: 600;
-  font-size: clamp(10px, 2.8vw, 12px);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: var(--accent);
-  background: rgba(232, 101, 26, 0.1);
-  border: 1px solid rgba(232, 101, 26, 0.25);
-  border-radius: 6px;
-  padding: 3px 8px;
-  width: fit-content;
-}
-
-.expert-role {
-  font-family: 'Gilroy', sans-serif;
-  font-weight: 400;
-  font-size: clamp(12px, 3.4vw, 14px);
+  font-weight: 500;
+  font-size: clamp(13px, 3.6vw, 15px);
   line-height: 1.55;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   text-align: left;
+}
+
+.expert-name-inline {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 800;
+  font-size: clamp(14px, 3.9vw, 16px);
+  color: var(--text-primary);
+}
+
+.expert-highlight {
+  color: var(--accent);
+  font-weight: 700;
 }
 
 /* --- Проблемы --- */
