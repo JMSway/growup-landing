@@ -2426,6 +2426,11 @@ ul {
 #step-1 > .step-card > .step-image { width: 98%; }
 /* Lead — result block */
 #step-1 .step-result { margin-top: 16px; }
+/* Текст результата Шага 1 — адаптивный, держит 4 строки на 375–430px */
+#step-1 .step-result__text {
+  font-size: clamp(17px, 4.8vw, 20px);
+  line-height: 1.55;
+}
 #step-1 .step-pointer { font-size: 17px; }
 #step-1 .step-pointer iconify-icon { font-size: 15px; }
 
