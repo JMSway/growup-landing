@@ -1715,7 +1715,7 @@ ul {
   font-weight: 500;
   font-size: clamp(15px, 4.4vw, 17px);
   line-height: 1.45;
-  color: var(--text-secondary);
+  color: var(--text-primary);
 }
 
 /* Стекание свечения по словам "ему нельзя откладывать" */
@@ -1727,7 +1727,7 @@ ul {
 .shimmer-word {
   display: inline-block;
   font-weight: 700;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   animation: shimmerWord 3.6s ease-in-out infinite;
 }
 
@@ -1737,12 +1737,12 @@ ul {
 
 @keyframes shimmerWord {
   0%, 50%, 100% {
-    color: var(--text-secondary);
+    color: var(--text-primary);
     text-shadow: none;
   }
   15%, 25% {
-    color: var(--text-primary);
-    text-shadow: 0 0 8px rgba(242, 237, 232, 0.4);
+    color: #FFFFFF;
+    text-shadow: 0 0 10px rgba(242, 237, 232, 0.6);
   }
 }
 
