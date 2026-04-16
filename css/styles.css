@@ -1720,7 +1720,7 @@ ul {
 .step-result-headline {
   font-family: 'Gilroy', sans-serif;
   font-weight: 800;
-  font-size: clamp(14px, 3.8vw, 16px);
+  font-size: clamp(17px, 4.5vw, 20px);
   color: var(--text-primary);
   text-transform: uppercase;
   text-align: center;
@@ -2436,7 +2436,7 @@ ul {
 #step-2 .step-list-bullets li { font-size: 14px; }
 #step-2 .step-compare { margin-top: 12px; gap: 8px; }
 /* Шаг 3 специфичные */
-#step-3 .step-headline { font-size: 15px; font-family: 'Gilroy', sans-serif; font-weight: 800; text-align: left; text-transform: uppercase; margin: 2px 0 6px; }
+#step-3 .step-headline { font-size: clamp(18px, 5vw, 22px); font-family: 'Oswald', sans-serif; font-weight: 700; text-align: left; text-transform: uppercase; margin: 2px 0 18px; }
 #step-3 .step-headline-icon { font-size: 30px; }
 #step-3 .step-text:not(.step-pointer):not(.step-highlight):not(.step-subhead):not(.step-main-line) { font-size: 17px; }
 /* Body — subhead (16→17) */
