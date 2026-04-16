@@ -2459,7 +2459,7 @@ ul {
 #step-3 .step-result-row { font-size: 15px; }
 #step-3 .step-result-final { font-size: clamp(18px, 5.5vw, 26px); margin-top: 6px; padding-top: 8px; }
 #step-3 .step-result-headline { font-size: clamp(15px, 4.5vw, 18px); }
-.step-rhl-sm { font-size: clamp(12px, 3.3vw, 18px); }
+.step-rhl-sm { font-size: clamp(12px, 3.3vw, 14px); }
 .step-result-block .step-result__badge { margin-bottom: 10px; }
 
 [data-theme="light"] .step-card {
