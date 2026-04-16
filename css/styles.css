@@ -1715,6 +1715,12 @@ ul {
 /* Финальный заголовок-результат (заменяет .step-result в Шагах 2 и 3) */
 .step-result-block {
   margin-top: 22px;
+  padding: 23px 19px;
+  background: rgba(232, 101, 26, 0.03);
+  border: 1px solid rgba(232, 101, 26, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 0 24px rgba(232, 101, 26, 0.08);
+  text-align: center;
 }
 
 .step-result-headline {
@@ -2244,7 +2250,7 @@ ul {
 .step-result__text {
   color: var(--text-primary);
   font-family: 'Gilroy', sans-serif;
-  font-size: clamp(14px, 4.5vw, 22px);
+  font-size: clamp(13px, 3.7vw, 15px);
   font-weight: 500;
   line-height: 1.4;
   margin: 0;
