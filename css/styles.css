@@ -4406,7 +4406,7 @@ a.bonus-card:active {
 
 .outcome-line {
   display: block;
-  font-size: clamp(15px, 4.6vw, 20px);
+  font-size: clamp(17px, 4.6vw, 20px);
   text-align: center;
   white-space: nowrap;
 }
@@ -4642,7 +4642,7 @@ a.bonus-card:active {
 }
 
 @media (max-width: 360px) {
-  .outcome-line { font-size: 16px; }
+  .outcome-line { font-size: 17px; }
   .outcome-label { font-size: 24px; }
 }
 
