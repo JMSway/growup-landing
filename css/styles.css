@@ -2458,7 +2458,7 @@ ul {
 /* Body — result rows (11-13→15) */
 #step-3 .step-result-row { font-size: 15px; }
 #step-3 .step-result-final { font-size: clamp(18px, 5.5vw, 26px); margin-top: 6px; padding-top: 8px; }
-#step-3 .step-result { padding: 18px 14px 18px 22px; }
+#step-3 .step-result { padding: 18px 14px 18px 30px; }
 #step-3 .step-result__text {
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
