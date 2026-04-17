@@ -515,38 +515,6 @@ if (floatingWa && priceSection) {
 }
 
 /* =========================================================
-   STICKY STEP BADGES
-   Sentinel approach: 1px div inserted before each .step-badge.
-   When sentinel leaves viewport top → badge is stuck → .is-stuck.
-   position: sticky handles section-end ungluing natively.
-   ========================================================= */
-(function () {
-  document.querySelectorAll('.step').forEach(function (section) {
-    var badge = section.querySelector('.step-badge');
-    if (!badge) return;
-
-    var sentinel = document.createElement('div');
-    sentinel.className = 'step-badge-sentinel';
-    sentinel.setAttribute('aria-hidden', 'true');
-    badge.parentNode.insertBefore(sentinel, badge);
-
-    var observer = new IntersectionObserver(
-      function (entries) {
-        var entry = entries[0];
-        if (!entry.isIntersecting && entry.boundingClientRect.top < 0) {
-          badge.classList.add('is-stuck');
-        } else {
-          badge.classList.remove('is-stuck');
-        }
-      },
-      { threshold: [0] }
-    );
-
-    observer.observe(sentinel);
-  });
-})();
-
-/* =========================================================
    ЗАЩИТА ОТ КОПИРОВАНИЯ - START
    Переключатель: <html data-copy-protection="on"|"off"> в index.html
    Листенеры активны только когда атрибут === "on".
