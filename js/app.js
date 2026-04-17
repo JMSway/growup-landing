@@ -514,6 +514,26 @@ if (floatingWa && priceSection) {
   }, { passive: true });
 }
 
+/* ---- STICKY STEP BADGES ---- */
+(function () {
+  document.querySelectorAll('.step').forEach(function (section) {
+    var badge = section.querySelector('.step-badge');
+    if (!badge) return;
+    var sentinel = document.createElement('div');
+    sentinel.className = 'step-badge-sentinel';
+    sentinel.setAttribute('aria-hidden', 'true');
+    badge.parentNode.insertBefore(sentinel, badge);
+    new IntersectionObserver(function (entries) {
+      var e = entries[0];
+      if (!e.isIntersecting && e.boundingClientRect.top < 0) {
+        badge.classList.add('is-stuck');
+      } else {
+        badge.classList.remove('is-stuck');
+      }
+    }, { threshold: [0] }).observe(sentinel);
+  });
+})();
+
 /* =========================================================
    ЗАЩИТА ОТ КОПИРОВАНИЯ - START
    Переключатель: <html data-copy-protection="on"|"off"> в index.html
