@@ -574,13 +574,47 @@ if (floatingWa && priceSection) {
 (function () {
   if (typeof fbq !== 'function') return;
 
-  // Wrapper: пробрасывает test_event_code из URL во все события (для Test Events панели)
+  function getCookie(name) {
+    var m = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
+    return m ? decodeURIComponent(m[1]) : undefined;
+  }
+
+  function genEventId() {
+    if (window.crypto && crypto.randomUUID) return crypto.randomUUID();
+    return 'ev_' + Date.now() + '_' + Math.random().toString(36).slice(2);
+  }
+
+  // CAPI: дублирует событие на сервер (Cloudflare Pages Function) с тем же event_id,
+  // что и в fbq() ниже — Meta дедуплицирует браузерное и серверное событие сама.
+  // Если /api/capi недоступен (напр. локальный dev-сервер) — тихо игнорируем, пиксель не страдает.
+  function sendCapi(eventName, eventId, params) {
+    try {
+      var payload = {
+        event_name: eventName,
+        event_id: eventId,
+        event_source_url: window.location.href,
+        fbp: getCookie('_fbp'),
+        fbc: getCookie('_fbc'),
+        custom_data: params || undefined,
+      };
+      if (window.__fbTestEventCode) payload.test_event_code = window.__fbTestEventCode;
+      fetch('/api/capi', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+        keepalive: true,
+      }).catch(function () {});
+    } catch (e) {}
+  }
+
+  // Wrapper: шлёт событие в fbq() с общим eventID + пробрасывает test_event_code,
+  // и параллельно дублирует его через CAPI (sendCapi) для дедупликации на стороне Meta
   function track(method, name, params) {
-    if (window.__fbTestEventCode) {
-      fbq(method, name, params || {}, { test_event_code: window.__fbTestEventCode });
-    } else {
-      fbq(method, name, params);
-    }
+    var eventId = genEventId();
+    var options = { eventID: eventId };
+    if (window.__fbTestEventCode) options.test_event_code = window.__fbTestEventCode;
+    fbq(method, name, params || {}, options);
+    sendCapi(name, eventId, params);
   }
 
   var fired = Object.create(null);
@@ -632,6 +666,6 @@ if (floatingWa && priceSection) {
   document.addEventListener('click', function (e) {
     var link = e.target.closest && e.target.closest('a[href*="wa.me/"]');
     if (!link) return;
-    track('track', 'Lead', { content_name: ctaLocation(link) });
+    track('track', 'Lead', { content_name: ctaLocation(link), value: 4990, currency: 'KZT' });
   }, { capture: true });
 })();
