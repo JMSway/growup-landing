@@ -60,11 +60,38 @@
     if (t) window.__fbTestEventCode = t;
   })();
 
-  if (window.__fbTestEventCode) {
-    fbq('track', 'PageView', {}, { test_event_code: window.__fbTestEventCode });
-  } else {
-    fbq('track', 'PageView');
-  }
+  // PageView: браузер + CAPI с общим event_id (та же схема дедупликации, что в js/app.js)
+  (function () {
+    function genId() {
+      if (window.crypto && crypto.randomUUID) return crypto.randomUUID();
+      return 'ev_' + Date.now() + '_' + Math.random().toString(36).slice(2);
+    }
+    function getCookie(name) {
+      var m = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
+      return m ? decodeURIComponent(m[1]) : undefined;
+    }
+    var eventId = genId();
+    var options = { eventID: eventId };
+    if (window.__fbTestEventCode) options.test_event_code = window.__fbTestEventCode;
+    fbq('track', 'PageView', {}, options);
+
+    try {
+      var payload = {
+        event_name: 'PageView',
+        event_id: eventId,
+        event_source_url: window.location.href,
+        fbp: getCookie('_fbp'),
+        fbc: getCookie('_fbc'),
+      };
+      if (window.__fbTestEventCode) payload.test_event_code = window.__fbTestEventCode;
+      fetch('/api/capi', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+        keepalive: true,
+      }).catch(function () {});
+    } catch (e) {}
+  })();
   </script>
   <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=2121462675093372&ev=PageView&noscript=1"
